@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Sugar Cloud Food Truck</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { pink: '#ffb7b2', cream: '#fbf8f1', gold: '#e2a95c', blue: '#4facfe', dark: '#1f2937' }
+                    },
+                    fontFamily: { heading: ['Fredoka', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="antialiased transition-colors duration-300 dark:bg-slate-900 dark:text-white pt-20">
+
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-white shadow-md dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="index.html" class="font-heading text-2xl font-bold text-brand-dark dark:text-white flex items-center gap-2">
+                <i class="fa-solid fa-cloud text-brand-pink"></i> Sugar<span class="text-brand-pink">Cloud</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink transition">Home</a>
+                <a href="services.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink transition">Services</a>
+                <a href="contact.html" class="text-brand-pink font-medium">Contact</a>
+                <button class="theme-toggle text-brand-dark dark:text-gray-300"><i class="fa-solid fa-moon dark:hidden"></i><i class="fa-solid fa-sun hidden dark:inline"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: Contact hero banner -->
+    <section class="py-24 bg-brand-dark text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1920" alt="Bg" class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-3xl mx-auto px-4 relative z-10">
+            <h1 class="text-5xl md:text-6xl font-heading font-bold mb-6">Let's Connect</h1>
+            <p class="text-xl text-gray-300">Have a question or want to book the truck? Drop us a sweet message below.</p>
+        </div>
+    </section>
+
+    <!-- Two-column section for Form and Details -->
+    <section class="py-20 bg-white dark:bg-slate-900 relative -mt-10 rounded-t-[3rem] z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
+            
+            <!-- SECTION 2: Contact form -->
+            <div>
+                <h2 class="text-3xl font-heading font-bold mb-8 dark:text-white">Send a Message</h2>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">First Name</label>
+                            <input type="text" class="w-full bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-pink dark:text-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Last Name</label>
+                            <input type="text" class="w-full bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-pink dark:text-white">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                        <input type="email" class="w-full bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-pink dark:text-white">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                        <select class="w-full bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-pink dark:text-white">
+                            <option>Booking Inquiry</option>
+                            <option>General Question</option>
+                            <option>Feedback</option>
+                            <option>Press/Media</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                        <textarea rows="5" class="w-full bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-pink dark:text-white"></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-brand-dark dark:bg-white text-white dark:text-brand-dark font-bold py-4 rounded-xl hover:bg-brand-pink dark:hover:bg-brand-pink dark:hover:text-white transition">Send Message</button>
+                </form>
+            </div>
+
+            <!-- SECTION 4: Contact details and social links -->
+            <div class="bg-brand-cream dark:bg-slate-800 p-10 rounded-3xl h-fit">
+                <h3 class="text-2xl font-heading font-bold mb-8 dark:text-white">Contact Info</h3>
+                
+                <div class="space-y-6 mb-10">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-brand-pink text-xl flex-shrink-0 shadow-sm"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white">Phone</h4>
+                            <p class="text-gray-600 dark:text-gray-400">(555) 123-4567</p>
+                            <p class="text-sm text-gray-500">Mon-Fri, 9am - 5pm</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-brand-blue text-xl flex-shrink-0 shadow-sm"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white">Email</h4>
+                            <p class="text-gray-600 dark:text-gray-400">hello@sugarcloud.com</p>
+                            <p class="text-sm text-gray-500">We aim to reply within 24h</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-brand-gold text-xl flex-shrink-0 shadow-sm"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white">HQ Office</h4>
+                            <p class="text-gray-600 dark:text-gray-400">123 Sweet Street<br>Dessert District, CA 90210</p>
+                            <p class="text-sm text-brand-pink font-medium mt-1">Truck location varies daily.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="font-bold text-lg mb-4 dark:text-white">Follow Us</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="w-12 h-12 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-white hover:bg-brand-pink transition shadow-sm"><i class="fa-brands fa-instagram text-xl"></i></a>
+                    <a href="#" class="w-12 h-12 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-white hover:bg-brand-blue transition shadow-sm"><i class="fa-brands fa-twitter text-xl"></i></a>
+                    <a href="#" class="w-12 h-12 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-white hover:bg-brand-gold transition shadow-sm"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Google Maps section -->
+    <section class="bg-gray-200 dark:bg-slate-800 h-96 relative">
+        <!-- Mock Map using image for template -->
+        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1920" alt="Map" class="w-full h-full object-cover opacity-70">
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="bg-brand-dark text-white px-6 py-3 rounded-2xl shadow-xl flex items-center gap-3 animate-bounce">
+                <i class="fa-solid fa-truck text-brand-pink text-xl"></i>
+                <span class="font-bold">Sugar Cloud HQ</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark py-8 text-gray-400 text-center">
+        <p>&copy; 2026 Sugar Cloud Food Truck.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

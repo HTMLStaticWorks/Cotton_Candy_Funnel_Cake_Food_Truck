@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details | Sugar Cloud Food Truck</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { pink: '#ffb7b2', cream: '#fbf8f1', gold: '#e2a95c', blue: '#4facfe', dark: '#1f2937' }
+                    },
+                    fontFamily: { heading: ['Fredoka', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="antialiased transition-colors duration-300 dark:bg-slate-900 dark:text-white pt-20">
+
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-white shadow-md dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="index.html" class="font-heading text-2xl font-bold text-brand-dark dark:text-white flex items-center gap-2">
+                <i class="fa-solid fa-cloud text-brand-pink"></i> Sugar<span class="text-brand-pink">Cloud</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink transition">Home</a>
+                <a href="services.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink transition">Services</a>
+                <button class="theme-toggle text-brand-dark dark:text-gray-300"><i class="fa-solid fa-moon dark:hidden"></i><i class="fa-solid fa-sun hidden dark:inline"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: Detailed Service Overview -->
+    <section class="py-20 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <a href="services.html" class="text-brand-pink hover:underline">&larr; Back to Services</a>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800" alt="Full Truck Booking" class="rounded-3xl shadow-xl w-full">
+                </div>
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-heading font-bold text-brand-dark dark:text-white mb-4">Full Truck Booking</h1>
+                    <p class="text-2xl text-brand-pink font-bold mb-6">Starting at $500</p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                        Our flagship service. We bring the complete Sugar Cloud experience right to your venue. Our custom-designed, neon-illuminated step van is a centerpiece that will wow your guests. This service is ideal for outdoor weddings, corporate campus events, festivals, and large private parties.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                        With dual cotton candy machines and high-capacity fryers, we can comfortably serve up to 200 guests per hour, ensuring lines keep moving and everyone gets a hot, fresh dessert.
+                    </p>
+                    <button class="bg-brand-dark dark:bg-white text-white dark:text-brand-dark px-8 py-4 rounded-full font-bold hover:bg-brand-pink dark:hover:bg-brand-pink dark:hover:text-white transition w-full md:w-auto">Request This Service</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Included Features -->
+    <section class="py-20 bg-brand-cream dark:bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-heading font-bold text-center mb-12 dark:text-white">What's Included</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm flex gap-4 items-start border border-gray-100 dark:border-gray-700">
+                    <div class="bg-brand-pink/10 p-3 rounded-xl text-brand-pink text-xl"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <h4 class="font-bold text-lg dark:text-white mb-2">2 Hours of Service</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Active serving time. Setup and teardown time is complimentary and not billed.</p>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm flex gap-4 items-start border border-gray-100 dark:border-gray-700">
+                    <div class="bg-brand-blue/10 p-3 rounded-xl text-brand-blue text-xl"><i class="fa-solid fa-users"></i></div>
+                    <div>
+                        <h4 class="font-bold text-lg dark:text-white mb-2">3 Professional Staff</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">One dedicated order taker, one cotton candy spinner, and one funnel cake chef.</p>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm flex gap-4 items-start border border-gray-100 dark:border-gray-700">
+                    <div class="bg-brand-gold/10 p-3 rounded-xl text-brand-gold text-xl"><i class="fa-solid fa-list-ul"></i></div>
+                    <div>
+                        <h4 class="font-bold text-lg dark:text-white mb-2">Full Menu Access</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Guests can choose from up to 5 cotton candy flavors and 3 funnel cake signatures.</p>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm flex gap-4 items-start border border-gray-100 dark:border-gray-700">
+                    <div class="bg-brand-pink/10 p-3 rounded-xl text-brand-pink text-xl"><i class="fa-solid fa-music"></i></div>
+                    <div>
+                        <h4 class="font-bold text-lg dark:text-white mb-2">Entertainment Setup</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Includes our exterior neon lighting package and optional curated playlist played from the truck.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Pricing Table -->
+    <section class="py-20 bg-white dark:bg-slate-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-heading font-bold text-center mb-12 dark:text-white">Service Tiers</h2>
+            
+            <div class="overflow-x-auto rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-gray-50 dark:bg-slate-800 text-brand-dark dark:text-white">
+                            <th class="p-4 font-bold border-b border-gray-200 dark:border-gray-700">Feature</th>
+                            <th class="p-4 font-bold border-b border-gray-200 dark:border-gray-700 text-center">Basic Booking</th>
+                            <th class="p-4 font-bold border-b border-gray-200 dark:border-gray-700 text-center bg-brand-pink/10 text-brand-pink">VIP Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600 dark:text-gray-300">
+                        <tr>
+                            <td class="p-4 border-b border-gray-200 dark:border-gray-700">Base Price</td>
+                            <td class="p-4 border-b border-gray-200 dark:border-gray-700 text-center font-bold">$500</td>
+                            <td class="p-4 border-b border-gray-200 dark:border-gray-700 text-center font-bold bg-brand-pink/5">$850</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b border-gray-200 dark:border-gray-700">Hours Included</td>
+                            <td class="p-4 border-b border-gray-200 dark:border-gray-700 text-center">2 Hours</td>
+                            <td class="p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-brand-pink/5">4 Hours</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b border-gray-200 dark:border-gray-700">Cotton Candy Flavors</td>
+                            <td class="p-4 border-b border-gray-200 dark:border-gray-700 text-center">3 Classic</td>
+                            <td class="p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-brand-pink/5">5 Premium + Glow Wands</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4">Custom Branding</td>
+                            <td class="p-4 text-center"><i class="fa-solid fa-minus text-gray-400"></i></td>
+                            <td class="p-4 text-center bg-brand-pink/5"><i class="fa-solid fa-check text-brand-pink"></i> Custom cone sleeves</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: FAQ Accordion -->
+    <section class="py-20 bg-brand-cream dark:bg-slate-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-heading font-bold text-center mb-12 dark:text-white">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 cursor-pointer group">
+                    <h4 class="font-bold text-lg dark:text-white group-hover:text-brand-pink transition flex justify-between items-center">
+                        Do you need a power hookup?
+                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                    </h4>
+                    <p class="text-gray-600 dark:text-gray-400 mt-4 text-sm">Our truck has a built-in quiet generator that can power everything independently. If the venue requires no generators, we will need access to two separate 20-amp circuits.</p>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 cursor-pointer group">
+                    <h4 class="font-bold text-lg dark:text-white group-hover:text-brand-pink transition flex justify-between items-center">
+                        What happens if it rains?
+                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                    </h4>
+                    <p class="text-gray-600 dark:text-gray-400 mt-4 text-sm hidden">Cotton candy melts in high humidity and rain. For outdoor events, we require a covered backup location or tent. In case of severe weather, we offer flexible rescheduling.</p>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 cursor-pointer group">
+                    <h4 class="font-bold text-lg dark:text-white group-hover:text-brand-pink transition flex justify-between items-center">
+                        How much space does the truck need?
+                        <i class="fa-solid fa-chevron-down text-sm"></i>
+                    </h4>
+                    <p class="text-gray-600 dark:text-gray-400 mt-4 text-sm hidden">The truck requires a minimum space of 25ft length by 12ft width, with a clearance height of 11ft. We need a flat, paved or solid gravel surface.</p>
+                </div>
+            </div>
+            
+            <script>
+                // Simple accordion logic for demonstration
+                document.querySelectorAll('.group').forEach(item => {
+                    item.addEventListener('click', () => {
+                        const p = item.querySelector('p');
+                        p.classList.toggle('hidden');
+                        const i = item.querySelector('i');
+                        i.classList.toggle('fa-chevron-down');
+                        i.classList.toggle('fa-chevron-up');
+                    });
+                });
+            </script>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark py-8 text-gray-400 text-center">
+        <p>&copy; 2026 Sugar Cloud Food Truck.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Sugar Cloud Food Truck</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { pink: '#ffb7b2', cream: '#fbf8f1', gold: '#e2a95c', blue: '#4facfe', dark: '#1f2937' }
+                    },
+                    fontFamily: { heading: ['Fredoka', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="antialiased transition-colors duration-300 dark:bg-slate-900 dark:text-white pt-20">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-white shadow-md dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="index.html" class="font-heading text-2xl font-bold text-brand-dark dark:text-white flex items-center gap-2">
+                <i class="fa-solid fa-cloud text-brand-pink"></i> Sugar<span class="text-brand-pink">Cloud</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink transition">Home</a>
+                <a href="about.html" class="text-brand-pink font-medium">About</a>
+                <a href="services.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink transition">Services</a>
+                <a href="contact.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink transition">Contact</a>
+                <button class="theme-toggle text-brand-dark dark:text-gray-300"><i class="fa-solid fa-moon dark:hidden"></i><i class="fa-solid fa-sun hidden dark:inline"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: Company Story -->
+    <section class="py-20 bg-brand-cream dark:bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl font-heading font-bold text-brand-dark dark:text-white mb-6">Spreading Joy, <br><span class="text-brand-pink">One Cloud at a Time.</span></h1>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                        Sugar Cloud started in 2022 with a simple mission: to elevate the classic carnival treats we all love into a premium, gourmet experience. We believe that dessert isn't just about taste; it's about the spectacle, the nostalgia, and the aesthetic.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                        What began as a small pop-up tent has grown into the city's most sought-after luxury dessert truck. Our signature glowing cotton candy and artisanal loaded funnel cakes have been featured at hundreds of weddings, corporate galas, and exclusive VIP events.
+                    </p>
+                    <div class="flex gap-6">
+                        <div class="text-center">
+                            <span class="block text-3xl font-heading font-bold text-brand-blue">50k+</span>
+                            <span class="text-sm text-gray-500">Clouds Spun</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="block text-3xl font-heading font-bold text-brand-gold">500+</span>
+                            <span class="text-sm text-gray-500">Events Catered</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=800" alt="Making Cotton Candy" class="rounded-3xl shadow-2xl relative z-10 w-full h-[500px] object-cover">
+                    <div class="absolute -bottom-6 -left-6 bg-brand-pink w-48 h-48 rounded-full mix-blend-multiply opacity-50 blur-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Mission and Values -->
+    <section class="py-20 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-heading font-bold text-brand-dark dark:text-white mb-16">Our Core Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-brand-cream dark:bg-slate-800 border border-transparent hover:border-brand-pink transition">
+                    <div class="w-16 h-16 bg-brand-pink/20 text-brand-pink rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 dark:text-white">Aesthetic First</h3>
+                    <p class="text-gray-600 dark:text-gray-400">We eat with our eyes first. Every dessert we serve is designed to be an Instagram-worthy masterpiece.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-brand-cream dark:bg-slate-800 border border-transparent hover:border-brand-blue transition">
+                    <div class="w-16 h-16 bg-brand-blue/20 text-brand-blue rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 dark:text-white">Premium Ingredients</h3>
+                    <p class="text-gray-600 dark:text-gray-400">We use organic sugars, natural flavorings, and high-quality toppings. No artificial aftertastes.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-brand-cream dark:bg-slate-800 border border-transparent hover:border-brand-gold transition">
+                    <div class="w-16 h-16 bg-brand-gold/20 text-brand-gold rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fa-regular fa-face-smile-beam"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 dark:text-white">Creating Smiles</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Our ultimate goal is to bring out the inner child in every guest, delivering pure joy and nostalgia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Team Introduction -->
+    <section class="py-20 bg-slate-50 dark:bg-slate-800 border-y border-gray-100 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-heading font-bold text-brand-dark dark:text-white mb-4">Meet The Sugar Smiths</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">The passionate team behind the sweetest truck in town.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Team 1 -->
+                <div class="text-center group">
+                    <div class="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-brand-pink group-hover:scale-105 transition">
+                        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=400" alt="Founder" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold dark:text-white mb-1">Chloe Davis</h3>
+                    <p class="text-brand-pink font-medium mb-3">Founder & Lead Spinner</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 px-4">Former pastry chef who fell in love with the art of spun sugar.</p>
+                </div>
+                <!-- Team 2 -->
+                <div class="text-center group">
+                    <div class="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-brand-blue group-hover:scale-105 transition">
+                        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=400" alt="Chef" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold dark:text-white mb-1">Marcus Chen</h3>
+                    <p class="text-brand-blue font-medium mb-3">Funnel Cake Master</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 px-4">Develops all our wild funnel cake batter recipes and seasonal toppings.</p>
+                </div>
+                <!-- Team 3 -->
+                <div class="text-center group">
+                    <div class="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-brand-gold group-hover:scale-105 transition">
+                        <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?q=80&w=400" alt="Events" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold dark:text-white mb-1">Elena Rodriguez</h3>
+                    <p class="text-brand-gold font-medium mb-3">Event Director</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 px-4">Coordinates all our catering gigs, ensuring flawless luxury service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Testimonials -->
+    <section class="py-20 bg-brand-pink text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <i class="fa-solid fa-quote-left text-5xl opacity-30 mb-8"></i>
+            <h2 class="text-3xl md:text-5xl font-heading font-medium leading-tight mb-8">"Sugar Cloud completely transformed our corporate event. The aesthetic was immaculate, and the funnel cakes were the best I've ever had."</h2>
+            <div class="flex items-center justify-center gap-4">
+                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-pink font-bold">JD</div>
+                <div class="text-left">
+                    <p class="font-bold">Jonathan Doe</p>
+                    <p class="text-sm opacity-80">Tech Corp CEO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark pt-16 pb-8 text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2026 Sugar Cloud Food Truck. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

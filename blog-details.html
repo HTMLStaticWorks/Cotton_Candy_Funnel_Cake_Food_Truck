@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details | Sugar Cloud Food Truck</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { pink: '#ffb7b2', cream: '#fbf8f1', gold: '#e2a95c', blue: '#4facfe', dark: '#1f2937' }
+                    },
+                    fontFamily: { heading: ['Fredoka', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="antialiased transition-colors duration-300 dark:bg-slate-900 dark:text-white pt-20">
+
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-white shadow-md dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="index.html" class="font-heading text-2xl font-bold text-brand-dark dark:text-white flex items-center gap-2">
+                <i class="fa-solid fa-cloud text-brand-pink"></i> Sugar<span class="text-brand-pink">Cloud</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink transition">Home</a>
+                <a href="blog.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink transition">Blog</a>
+                <button class="theme-toggle text-brand-dark dark:text-gray-300"><i class="fa-solid fa-moon dark:hidden"></i><i class="fa-solid fa-sun hidden dark:inline"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: Featured article banner -->
+    <section class="relative h-[60vh] flex items-end pb-12 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1920" alt="Funnel Cake" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 relative z-10 w-full text-center">
+            <div class="mb-4">
+                <span class="bg-brand-pink text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Recipes</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-heading font-bold text-white mb-6 leading-tight">The Secret to the Perfect Funnel Cake Batter</h1>
+            <div class="flex items-center justify-center gap-6 text-gray-300 text-sm">
+                <div class="flex items-center gap-2">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=100" alt="Author" class="w-8 h-8 rounded-full">
+                    <span>Marcus Chen</span>
+                </div>
+                <span>|</span>
+                <span><i class="fa-regular fa-calendar mr-2"></i> May 12, 2026</span>
+                <span>|</span>
+                <span><i class="fa-regular fa-clock mr-2"></i> 5 min read</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Area (Sections 2 & 3 side by side) -->
+    <div class="bg-white dark:bg-slate-900 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
+            
+            <!-- SECTION 2: Full article content -->
+            <section class="lg:col-span-2 prose dark:prose-invert prose-lg max-w-none">
+                <p class="lead text-xl text-gray-600 dark:text-gray-300 mb-8 font-medium">
+                    For years, customers have asked us: "How do you get it so crispy on the outside but perfectly fluffy on the inside?" Today, we're pulling back the curtain on the Sugar Cloud funnel cake method.
+                </p>
+
+                <h2 class="text-3xl font-heading font-bold mb-4 mt-8 dark:text-white">It's All in the Temperature</h2>
+                <p class="mb-6 text-gray-600 dark:text-gray-400">
+                    The biggest mistake home cooks make when trying to replicate carnival funnel cake is oil temperature. If your oil is too cold, the batter absorbs it and becomes greasy. Too hot, and the outside burns before the inside cooks. <strong>We keep our fryers exactly at 375°F (190°C).</strong>
+                </p>
+
+                <div class="bg-brand-cream dark:bg-slate-800 p-8 rounded-2xl border-l-4 border-brand-pink mb-8 my-8">
+                    <p class="italic text-gray-700 dark:text-gray-300 m-0">"A funnel cake should taste like a sweet memory, not a deep fryer." - Marcus Chen</p>
+                </div>
+
+                <h2 class="text-3xl font-heading font-bold mb-4 mt-8 dark:text-white">The Secret Ingredient</h2>
+                <p class="mb-6 text-gray-600 dark:text-gray-400">
+                    Most standard recipes call for milk and water. We substitute half the liquid with a <em>club soda</em>. The carbonation adds tiny air pockets to the batter, creating a lighter, crispier texture that holds up perfectly under heavy toppings like our signature salted caramel.
+                </p>
+
+                <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=800" alt="Frying process" class="w-full rounded-2xl mb-8 shadow-md">
+
+                <h3 class="text-2xl font-bold mb-4 dark:text-white">Basic Recipe Ratio</h3>
+                <ul class="list-disc pl-6 mb-8 text-gray-600 dark:text-gray-400 space-y-2">
+                    <li>2 cups all-purpose flour</li>
+                    <li>2 tablespoons sugar</li>
+                    <li>1 teaspoon baking powder</li>
+                    <li>1/2 teaspoon salt</li>
+                    <li>1 cup whole milk</li>
+                    <li>1 cup club soda (cold)</li>
+                    <li>2 large eggs</li>
+                    <li>1 teaspoon vanilla extract</li>
+                </ul>
+
+                <p class="mb-8 text-gray-600 dark:text-gray-400">
+                    Mix the dry ingredients separately. Whisk the wet ingredients, then gently fold them into the dry. Do not overmix! Lumps are okay. Pour through a funnel (hence the name) in a swirling motion into your hot oil. Fry for 1 minute per side until golden brown.
+                </p>
+                
+                <div class="flex gap-2 mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+                    <span class="bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-400 text-sm px-3 py-1 rounded-full">Recipe</span>
+                    <span class="bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-400 text-sm px-3 py-1 rounded-full">Funnel Cake</span>
+                    <span class="bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-400 text-sm px-3 py-1 rounded-full">Tips</span>
+                </div>
+            </section>
+
+            <!-- SECTION 3: Sidebar widgets -->
+            <aside class="lg:col-span-1 space-y-8">
+                <!-- Author Widget -->
+                <div class="bg-brand-cream dark:bg-slate-800 p-6 rounded-3xl text-center border border-gray-100 dark:border-gray-700">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=200" alt="Marcus Chen" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-white dark:border-slate-700 shadow-md">
+                    <h4 class="font-bold text-xl dark:text-white mb-1">Marcus Chen</h4>
+                    <p class="text-brand-pink text-sm font-medium mb-4">Funnel Cake Master</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">Crafting the perfect balance of crispy and fluffy since 2018.</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="#" class="w-8 h-8 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-brand-pink transition"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="bg-brand-cream dark:bg-slate-800 p-6 rounded-3xl border border-gray-100 dark:border-gray-700">
+                    <h4 class="font-bold text-lg dark:text-white mb-4 border-b border-gray-200 dark:border-gray-700 pb-2">Categories</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="flex justify-between items-center text-gray-600 dark:text-gray-400 hover:text-brand-pink transition"><span>Recipes</span> <span class="bg-white dark:bg-slate-700 text-xs px-2 py-1 rounded-full">12</span></a></li>
+                        <li><a href="#" class="flex justify-between items-center text-gray-600 dark:text-gray-400 hover:text-brand-pink transition"><span>Events</span> <span class="bg-white dark:bg-slate-700 text-xs px-2 py-1 rounded-full">8</span></a></li>
+                        <li><a href="#" class="flex justify-between items-center text-gray-600 dark:text-gray-400 hover:text-brand-pink transition"><span>Behind the Scenes</span> <span class="bg-white dark:bg-slate-700 text-xs px-2 py-1 rounded-full">5</span></a></li>
+                        <li><a href="#" class="flex justify-between items-center text-gray-600 dark:text-gray-400 hover:text-brand-pink transition"><span>News</span> <span class="bg-white dark:bg-slate-700 text-xs px-2 py-1 rounded-full">3</span></a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- SECTION 4: Related posts section -->
+    <section class="py-20 bg-brand-cream dark:bg-slate-800 border-t border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-heading font-bold mb-10 dark:text-white">You Might Also Like</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Related 1 -->
+                <a href="#" class="group flex flex-col sm:flex-row bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="sm:w-1/3 h-48 sm:h-auto relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=400" alt="Related" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="sm:w-2/3 p-6 flex flex-col justify-center">
+                        <span class="text-brand-pink text-xs font-bold uppercase tracking-wider mb-2">Behind the Scenes</span>
+                        <h4 class="text-xl font-bold font-heading dark:text-white mb-2 group-hover:text-brand-pink transition">Building the New LED Truck Setup</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Take a tour of our newly renovated truck interior...</p>
+                    </div>
+                </a>
+                
+                <!-- Related 2 -->
+                <a href="#" class="group flex flex-col sm:flex-row bg-white dark:bg-slate-900 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="sm:w-1/3 h-48 sm:h-auto relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=400" alt="Related" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="sm:w-2/3 p-6 flex flex-col justify-center">
+                        <span class="text-brand-blue text-xs font-bold uppercase tracking-wider mb-2">Events</span>
+                        <h4 class="text-xl font-bold font-heading dark:text-white mb-2 group-hover:text-brand-blue transition">Highlight: The Miller Wedding</h4>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">A look back at one of our favorite catering gigs...</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark py-8 text-gray-400 text-center">
+        <p>&copy; 2026 Sugar Cloud Food Truck. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

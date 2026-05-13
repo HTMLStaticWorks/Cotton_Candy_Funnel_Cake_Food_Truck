@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Sugar Cloud Food Truck</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { pink: '#ffb7b2', cream: '#fbf8f1', gold: '#e2a95c', blue: '#4facfe', dark: '#1f2937' }
+                    },
+                    fontFamily: { heading: ['Fredoka', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="antialiased transition-colors duration-300 dark:bg-slate-900 dark:text-white pt-20">
+
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-white shadow-md dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="index.html" class="font-heading text-2xl font-bold text-brand-dark dark:text-white flex items-center gap-2">
+                <i class="fa-solid fa-cloud text-brand-pink"></i> Sugar<span class="text-brand-pink">Cloud</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink transition">Home</a>
+                <a href="about.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink transition">About</a>
+                <a href="services.html" class="text-brand-pink font-medium">Services</a>
+                <a href="pricing.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink transition">Pricing</a>
+                <button class="theme-toggle text-brand-dark dark:text-gray-300"><i class="fa-solid fa-moon dark:hidden"></i><i class="fa-solid fa-sun hidden dark:inline"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: Services Grid -->
+    <section class="py-20 bg-brand-cream dark:bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-heading font-bold text-brand-dark dark:text-white mb-4">Our Services</h1>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">We provide luxury dessert experiences tailored to your specific event needs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-lg hover:-translate-y-2 transition duration-300">
+                    <i class="fa-solid fa-truck text-4xl text-brand-pink mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-3 dark:text-white">Full Truck Booking</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">Book our entire illuminated food truck for your large event. Includes our full menu, 3 staff members, and high-volume output capability.</p>
+                    <a href="service-details.html" class="text-brand-pink font-bold hover:underline">View Details &rarr;</a>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-lg hover:-translate-y-2 transition duration-300">
+                    <i class="fa-solid fa-cart-flatbed text-4xl text-brand-blue mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-3 dark:text-white">Indoor Cart Setup</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">Perfect for hotel ballrooms and indoor venues. A beautiful, sleek cart setup that brings the carnival indoors without the fumes.</p>
+                    <a href="service-details.html" class="text-brand-blue font-bold hover:underline">View Details &rarr;</a>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-lg hover:-translate-y-2 transition duration-300">
+                    <i class="fa-solid fa-gift text-4xl text-brand-gold mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-3 dark:text-white">Custom Party Favors</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">Pre-packaged gourmet cotton candy in custom branded tubs. Perfect for weddings, corporate gifting, or party bags.</p>
+                    <a href="service-details.html" class="text-brand-gold font-bold hover:underline">View Details &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Catering/event services showcase -->
+    <section class="py-20 bg-white dark:bg-slate-900 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2 relative">
+                    <div class="absolute inset-0 bg-brand-pink/20 rounded-full blur-3xl transform translate-x-10 translate-y-10"></div>
+                    <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=800" alt="Wedding Catering" class="rounded-3xl shadow-xl relative z-10 w-full object-cover aspect-video">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-sm text-brand-pink font-bold tracking-widest uppercase mb-2">Specialty</h2>
+                    <h3 class="text-4xl font-heading font-bold mb-6 dark:text-white">Wedding & VIP Receptions</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">
+                        Make your special day unforgettable with our glowing cotton candy wands and miniature funnel cake bar. We work directly with your wedding planner to ensure the colors, flavors, and setup perfectly match your aesthetic.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-pink"></i> Color-matched sugars</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-pink"></i> Champagne-infused flavors</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-pink"></i> Formal attire staff</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Pricing Highlights -->
+    <section class="py-20 bg-brand-dark text-white text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-heading font-bold mb-12">Transparent Pricing Highlights</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="border border-gray-700 rounded-2xl p-6 bg-slate-800/50">
+                    <h4 class="text-xl mb-2 font-bold text-brand-pink">Hourly Rate</h4>
+                    <p class="text-3xl font-heading mb-2">$250<span class="text-sm text-gray-400">/hr</span></p>
+                    <p class="text-sm text-gray-400">2-hour minimum. Includes unlimited basic spins.</p>
+                </div>
+                <div class="border border-gray-700 rounded-2xl p-6 bg-slate-800/50 scale-105 shadow-xl border-brand-blue">
+                    <h4 class="text-xl mb-2 font-bold text-brand-blue">Truck Minimum</h4>
+                    <p class="text-3xl font-heading mb-2">$500</p>
+                    <p class="text-sm text-gray-400">Required for Saturday night private bookings.</p>
+                </div>
+                <div class="border border-gray-700 rounded-2xl p-6 bg-slate-800/50">
+                    <h4 class="text-xl mb-2 font-bold text-brand-gold">Per Guest</h4>
+                    <p class="text-3xl font-heading mb-2">$8 - $15</p>
+                    <p class="text-sm text-gray-400">Varies based on gourmet toppings & add-ons.</p>
+                </div>
+            </div>
+            <div class="mt-10">
+                <a href="pricing.html" class="inline-block bg-white text-brand-dark px-8 py-3 rounded-full font-bold hover:bg-brand-pink hover:text-white transition">View Detailed Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Booking Workflow Timeline -->
+    <section class="py-20 bg-brand-cream dark:bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-heading font-bold text-center mb-16 dark:text-white">How To Book Us</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center relative">
+                    <div class="w-16 h-16 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-2xl font-bold text-brand-pink shadow-md mx-auto mb-4 relative z-10">1</div>
+                    <h4 class="font-bold text-lg mb-2 dark:text-white">Inquire</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Fill out our contact form with your event date and details.</p>
+                    <div class="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gray-300 dark:bg-gray-600 -z-0"></div>
+                </div>
+                <div class="text-center relative">
+                    <div class="w-16 h-16 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-2xl font-bold text-brand-blue shadow-md mx-auto mb-4 relative z-10">2</div>
+                    <h4 class="font-bold text-lg mb-2 dark:text-white">Consultation</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">We hop on a quick call to discuss menus, themes, and logistics.</p>
+                    <div class="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gray-300 dark:bg-gray-600 -z-0"></div>
+                </div>
+                <div class="text-center relative">
+                    <div class="w-16 h-16 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-2xl font-bold text-brand-gold shadow-md mx-auto mb-4 relative z-10">3</div>
+                    <h4 class="font-bold text-lg mb-2 dark:text-white">Secure Date</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Sign the contract and pay the 50% deposit to lock in your date.</p>
+                    <div class="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gray-300 dark:bg-gray-600 -z-0"></div>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-brand-pink text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-md mx-auto mb-4 relative z-10"><i class="fa-solid fa-check"></i></div>
+                    <h4 class="font-bold text-lg mb-2 dark:text-white">Enjoy</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">We arrive 1 hour early to set up, serve, and clean up afterwards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark pt-16 pb-8 text-gray-400 text-center">
+        <p>&copy; 2026 Sugar Cloud Food Truck. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
