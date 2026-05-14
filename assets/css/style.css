@@ -30,13 +30,13 @@ h1, h2, h3, h4, h5, h6, .heading-font {
 
 /* Glassmorphism */
 .glass {
-    background: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .glass-dark {
-    background: rgba(31, 41, 55, 0.7);
+    background-color: rgba(31, 41, 55, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -141,4 +141,55 @@ h1, h2, h3, h4, h5, h6, .heading-font {
 .nav-link:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+/* Scroll Up Button */
+#scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #ffb7b2;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(20px);
+    box-shadow: 0 4px 20px rgba(255, 183, 178, 0.4);
+    border: none;
+    outline: none;
+}
+
+#scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#scroll-top:hover {
+    background: #1f2937;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(31, 41, 55, 0.3);
+}
+
+.dark #scroll-top {
+    background: #ffb7b2;
+    color: #1f2937;
+}
+
+.dark #scroll-top:hover {
+    background: white;
+    color: #ffb7b2;
+}
+
+[dir="rtl"] #scroll-top {
+    right: auto;
+    left: 30px;
 }

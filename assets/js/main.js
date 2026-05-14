@@ -99,7 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Active Link Highlighting
     const highlightActiveLink = () => {
         const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-        const navLinks = document.querySelectorAll('#navbar div.hidden.md\\:flex a:not([href="bookings.html"]), #mobile-menu a:not([href="bookings.html"])');
+        // Updated selector to match lg:flex for desktop and #mobile-menu for mobile
+        const navLinks = document.querySelectorAll('#navbar .lg\\:flex a, #mobile-menu a');
         
         // Target the Home buttons specifically
         const desktopHomeBtn = document.querySelector('#navbar .group button');
@@ -114,25 +115,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (!href) return;
+
             // Add hover underline class
             link.classList.add('nav-link');
             
-            // Remove any hardcoded active styles
-            link.classList.remove('text-brand-pink', 'bg-brand-pink/5', 'nav-link-active', 'font-bold', 'text-brand-dark');
-            link.classList.add('text-white');
+            // Remove any hardcoded or previously added active styles
+            link.classList.remove('text-brand-pink', 'bg-brand-pink/5', 'nav-link-active', 'font-bold');
             
-            const href = link.getAttribute('href');
-            if (href === currentPath) {
+            // Only add text-white if it's not a button-like link (e.g., Bookings)
+            if (!link.classList.contains('bg-brand-pink')) {
+                link.classList.add('text-white');
+            }
+            
+            // Check if this link matches current path
+            if (href === currentPath || (currentPath === 'index.html' && href === 'index-2.html' && window.location.pathname.includes('index-2'))) {
                 // Apply active styles
                 link.classList.add('nav-link-active', 'text-brand-pink', 'font-bold');
                 link.classList.remove('text-white');
                 
                 // Add background for dropdown items if active
-                if (link.classList.contains('block')) {
+                if (link.classList.contains('block') && link.closest('.group')) {
                     link.classList.add('bg-brand-pink/5');
                 }
                 
-                // If it's a child of Home dropdown, highlight Home buttons
+                // If it's a child of Home dropdown or an index page, highlight Home buttons
                 if (href.includes('index')) {
                     [desktopHomeBtn, mobileHomeBtn].forEach(btn => {
                         if (btn) {
@@ -144,6 +152,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     };
+
+    // Scroll Top Button
+    const scrollTopBtn = document.getElementById('scroll-top');
+    if (scrollTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 
     highlightActiveLink();
 });

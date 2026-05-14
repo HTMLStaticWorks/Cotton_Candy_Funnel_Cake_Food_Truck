@@ -67,7 +67,7 @@
                 <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center space-x-4 xl:space-x-8">
                     <div class="relative group">
-                        <button class="flex items-center gap-1 text-brand-pink font-medium transition focus:outline-none py-2">
+                        <button class="flex items-center gap-1 text-white font-medium transition focus:outline-none py-2">
                             Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:-rotate-180"></i>
                         </button>
                         <div class="absolute left-0 top-full mt-0 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top border border-gray-100 dark:border-gray-700 overflow-hidden z-50">
@@ -92,7 +92,7 @@
                         RTL
                     </button>
                     
-                    <a href="bookings.html" class="bg-brand-pink text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 shadow-lg hover-glow transition transform hover:-translate-y-0.5">Bookings</a>
+                    <a href="bookings.html" class="bg-brand-pink text-white px-6 py-2 rounded-full font-medium hover:bg-white hover:text-brand-pink transition transform hover:-translate-y-0.5 shadow-lg hover-glow">Bookings</a>
                 </div>
 
                 <!-- Mobile menu button -->
@@ -115,7 +115,7 @@
         <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 shadow-lg absolute w-full left-0 border-t border-gray-800">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <div class="space-y-1">
-                    <div class="px-3 py-2 text-brand-pink font-medium flex justify-between items-center cursor-pointer" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('-rotate-180')">
+                    <div class="px-3 py-2 text-white font-medium flex justify-between items-center cursor-pointer" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('-rotate-180')">
                         Home <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
                     </div>
                     <div class="pl-6 space-y-1 pb-2">
@@ -128,13 +128,13 @@
                 <a href="catering.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Catering</a>
                 <a href="menu.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Menu</a>
                 <a href="contact.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Contact</a>
-                <a href="bookings.html" class="block w-full text-center mt-4 bg-brand-pink text-white px-6 py-3 rounded-full font-medium shadow-md">Bookings</a>
+                <a href="bookings.html" class="block w-full text-center mt-4 bg-brand-pink text-white px-6 py-3 rounded-full font-medium shadow-md hover:bg-white hover:text-brand-pink transition transform hover:-translate-y-0.5">Bookings</a>
             </div>
         </div>
     </nav>
 
     <!-- SECTION 1: Hero -->
-    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-brand-cream dark:bg-[#0f172a]">
+    <section class="relative min-h-screen flex items-center pt-20 pb-20 overflow-hidden bg-brand-cream dark:bg-[#0f172a]">
         <!-- Decorative blobs -->
         <div class="absolute top-20 left-10 w-72 h-72 bg-brand-pink rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
         <div class="absolute top-40 right-10 w-72 h-72 bg-brand-blue rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
@@ -153,9 +153,9 @@
                     <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto lg:mx-0">
                         Experience the magic of gourmet cotton candy and artisanal funnel cakes. The ultimate dessert catering for weddings, parties, and festivals.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center">
                         <a href="bookings.html" class="w-full sm:w-auto flex items-center justify-center bg-brand-dark dark:bg-white dark:text-brand-dark text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brand-pink dark:hover:bg-brand-pink dark:hover:text-white transition transform hover:-translate-y-1 shadow-xl">Book For Event</a>
-                        <a href="menu.html" class="w-full sm:w-auto flex items-center justify-center glass text-brand-dark dark:text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/50 transition gap-2">
+                        <a href="menu.html" class="w-full sm:w-auto flex items-center justify-center glass text-brand-dark dark:text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brand-pink hover:text-white transition transform hover:-translate-y-1 shadow-md hover:shadow-xl gap-2">
                             <i class="fa-solid fa-ice-cream"></i> View Menu
                         </a>
                     </div>
@@ -192,7 +192,7 @@
                     </div>
                     <h4 class="text-2xl font-heading font-bold text-brand-dark dark:text-white mb-2">Neon Strawberry Cake</h4>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">Classic funnel cake topped with fresh strawberries, powdered sugar, and a neon pink glaze.</p>
-                    <button class="mt-auto w-full py-3 rounded-xl border-2 border-brand-dark dark:border-white text-brand-dark dark:text-white font-semibold hover:bg-brand-dark hover:text-white dark:hover:bg-white dark:hover:text-brand-dark transition">Order Now</button>
+                    <button class="mt-auto w-full py-3 rounded-xl border-2 border-brand-dark dark:border-white text-brand-dark dark:text-white font-semibold hover:bg-brand-dark hover:text-white dark:hover:bg-white dark:hover:text-brand-dark transition transform hover:-translate-y-1 hover:shadow-lg">Order Now</button>
                 </div>
                 <!-- Card 2 -->
                 <div class="group flex flex-col bg-brand-cream dark:bg-slate-700 rounded-3xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-brand-blue/30">
@@ -204,7 +204,7 @@
                     </div>
                     <h4 class="text-2xl font-heading font-bold text-brand-dark dark:text-white mb-2">Galactic Glow Cloud</h4>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">Swirls of blueberry and raspberry cotton candy spun onto an LED glowing wand.</p>
-                    <button class="mt-auto w-full py-3 rounded-xl border-2 border-brand-dark dark:border-white text-brand-dark dark:text-white font-semibold hover:bg-brand-dark hover:text-white dark:hover:bg-white dark:hover:text-brand-dark transition">Order Now</button>
+                    <button class="mt-auto w-full py-3 rounded-xl border-2 border-brand-dark dark:border-white text-brand-dark dark:text-white font-semibold hover:bg-brand-dark hover:text-white dark:hover:bg-white dark:hover:text-brand-dark transition transform hover:-translate-y-1 hover:shadow-lg">Order Now</button>
                 </div>
                 <!-- Card 3 -->
                 <div class="group flex flex-col bg-brand-cream dark:bg-slate-700 rounded-3xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-brand-gold/30 md:col-span-2 lg:col-span-1 md:w-1/2 md:mx-auto lg:w-full lg:mx-0">
@@ -216,7 +216,7 @@
                     </div>
                     <h4 class="text-2xl font-heading font-bold text-brand-dark dark:text-white mb-2">Caramel Dream Cake</h4>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">Gourmet funnel cake loaded with sea salt caramel, toasted pecans, and vanilla bean cream.</p>
-                    <button class="mt-auto w-full py-3 rounded-xl border-2 border-brand-dark dark:border-white text-brand-dark dark:text-white font-semibold hover:bg-brand-dark hover:text-white dark:hover:bg-white dark:hover:text-brand-dark transition">Order Now</button>
+                    <button class="mt-auto w-full py-3 rounded-xl border-2 border-brand-dark dark:border-white text-brand-dark dark:text-white font-semibold hover:bg-brand-dark hover:text-white dark:hover:bg-white dark:hover:text-brand-dark transition transform hover:-translate-y-1 hover:shadow-lg">Order Now</button>
                 </div>
             </div>
             
@@ -272,7 +272,7 @@
                     </ul>
                     
                     <div class="mt-4">
-                        <a href="catering.html" class="bg-brand-dark dark:bg-white text-white dark:text-brand-dark px-8 py-4 rounded-full font-medium inline-block hover:shadow-lg transition">Explore Packages</a>
+                        <a href="catering.html" class="bg-brand-dark dark:bg-white text-white dark:text-brand-dark px-8 py-4 rounded-full font-medium inline-block hover:bg-white hover:text-brand-pink border-2 border-transparent hover:border-brand-pink transition transform hover:-translate-y-1 shadow-xl">Explore Packages</a>
                     </div>
                 </div>
             </div>
@@ -420,8 +420,8 @@
             <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Ready to make your event sweeter?</h2>
             <p class="text-white/80 text-lg mb-8 max-w-2xl mx-auto">Book our luxury dessert truck for your next gathering. Dates fill up fast, so secure your reservation today.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html" class="bg-brand-dark text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-brand-dark transition shadow-lg">Check Availability</a>
-                <a href="tel:+1234567890" class="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition flex items-center justify-center gap-2">
+                <a href="contact.html" class="bg-brand-dark text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-brand-dark transition transform hover:-translate-y-1 shadow-2xl">Check Availability</a>
+                <a href="tel:+1234567890" class="bg-white/20 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-brand-pink transition transform hover:-translate-y-1 shadow-2xl flex items-center justify-center gap-2">
                     <i class="fa-solid fa-phone"></i> (555) 123-4567
                 </a>
             </div>
@@ -500,6 +500,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
