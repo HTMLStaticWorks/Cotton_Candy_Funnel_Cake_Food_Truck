@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home 2 | Sugar Cloud | Luxury Cotton Candy & Funnel Cake</title>
+    <title>Home 2 | CandyLoop | Luxury Cotton Candy & Funnel Cake</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -39,39 +40,75 @@
 </head>
 <body class="antialiased transition-colors duration-300 dark:bg-slate-900 dark:text-white">
 
-    <!-- Navbar (Same as index.html but transparent background initially for this version) -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-white dark:bg-[#0f172a]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="font-heading text-2xl font-bold text-white flex items-center gap-2">
+                    <a href="index.html" class="font-heading text-2xl font-bold text-brand-dark dark:text-white flex items-center gap-2 hover:opacity-80 transition">
                         <i class="fa-solid fa-cloud text-brand-pink"></i>
-                        Sugar<span class="text-brand-pink">Cloud</span>
+                        Candy<span class="text-brand-pink">Loop</span>
                     </a>
                 </div>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index-2.html" class="text-brand-pink font-medium">Home 2</a>
-                    <a href="about.html" class="text-white hover:text-brand-pink transition">About</a>
-                    <a href="services.html" class="text-white hover:text-brand-pink transition">Services</a>
-                    <a href="menu.html" class="text-white hover:text-brand-pink transition">Menu</a>
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 text-brand-pink font-medium transition focus:outline-none py-2">
+                            Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:-rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 top-full mt-0 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top border border-gray-100 dark:border-gray-700 overflow-hidden z-50">
+                            <a href="index.html" class="block px-4 py-3 text-brand-pink bg-brand-pink/5 hover:bg-brand-pink/10 transition">Home 1 (Main)</a>
+                            <a href="index-2.html" class="block px-4 py-3 text-brand-dark dark:text-gray-300 hover:bg-brand-pink/10 hover:text-brand-pink transition border-t border-gray-100 dark:border-gray-700">Home 2 (Night)</a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">About</a>
+                    <a href="services.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Services</a>
+                    <a href="catering.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Catering</a>
+                    <a href="menu.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Menu</a>
+                    <a href="contact.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Contact</a>
                     
                     <!-- Theme Toggle -->
-                    <button class="theme-toggle text-white hover:text-brand-blue transition focus:outline-none" aria-label="Toggle Dark Mode">
+                    <button class="theme-toggle text-brand-dark dark:text-gray-300 hover:text-brand-blue transition focus:outline-none" aria-label="Toggle Dark Mode">
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:inline"></i>
                     </button>
                     
-                    <a href="contact.html" class="border border-white text-white px-6 py-2 rounded-full font-medium hover:bg-white hover:text-brand-dark transition">Contact Us</a>
+                    <a href="pricing.html" class="bg-brand-pink text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 shadow-lg hover-glow transition transform hover:-translate-y-0.5">Book Truck</a>
                 </div>
 
+                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center gap-4">
-                    <button id="mobile-menu-btn" class="text-white hover:text-brand-pink focus:outline-none">
+                    <button class="theme-toggle text-brand-dark dark:text-gray-300" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon dark:hidden"></i>
+                        <i class="fa-solid fa-sun hidden dark:inline"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-[#0f172a] shadow-lg absolute w-full left-0 border-t border-gray-100 dark:border-gray-800">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <div class="space-y-1">
+                    <div class="px-3 py-2 text-brand-pink font-medium flex justify-between items-center cursor-pointer" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('-rotate-180')">
+                        Home <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+                    </div>
+                    <div class="pl-6 space-y-1 pb-2">
+                        <a href="index.html" class="block px-3 py-2 text-brand-pink font-medium">Home 1 (Main)</a>
+                        <a href="index-2.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Home 2 (Night)</a>
+                    </div>
+                </div>
+                <a href="about.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">About</a>
+                <a href="services.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Services</a>
+                <a href="catering.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Catering</a>
+                <a href="menu.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Menu</a>
+                <a href="contact.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Contact</a>
+                <a href="pricing.html" class="block w-full text-center mt-4 bg-brand-pink text-white px-6 py-3 rounded-full font-medium shadow-md">Book Truck</a>
             </div>
         </div>
     </nav>
@@ -101,13 +138,13 @@
     </section>
 
     <!-- SECTION 2: Signature dessert showcase -->
-    <section id="signature" class="py-24 bg-brand-dark text-white">
+    <section id="signature" class="py-24 bg-white dark:bg-slate-800 text-brand-dark dark:text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="order-2 lg:order-1">
                     <h2 class="text-brand-blue font-bold tracking-widest uppercase mb-2">Signature Item</h2>
                     <h3 class="text-5xl font-heading font-bold mb-6">The Midnight Cloud</h3>
-                    <p class="text-gray-400 mb-8 text-lg leading-relaxed">
+                    <p class="text-gray-600 dark:text-gray-400 mb-8 text-lg leading-relaxed">
                         Our award-winning creation. Activated charcoal waffle cone, filled with midnight-berry artisan cotton candy, dusted with edible gold flakes, and illuminated with a food-safe glowing wand. 
                     </p>
                     <div class="flex items-center gap-6 mb-8">
@@ -115,34 +152,34 @@
                             <span class="block text-3xl font-heading font-bold text-brand-gold">$15</span>
                             <span class="text-xs text-gray-500 uppercase tracking-widest">Per Cone</span>
                         </div>
-                        <div class="h-12 w-px bg-gray-700"></div>
+                        <div class="h-12 w-px bg-gray-300 dark:bg-gray-700"></div>
                         <div class="flex gap-2">
-                            <span class="bg-gray-800 px-3 py-1 rounded text-sm text-gray-300">Vegan</span>
-                            <span class="bg-gray-800 px-3 py-1 rounded text-sm text-gray-300">Gluten-Free Option</span>
+                            <span class="bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded text-sm text-gray-700 dark:text-gray-300">Vegan</span>
+                            <span class="bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded text-sm text-gray-700 dark:text-gray-300">Gluten-Free Option</span>
                         </div>
                     </div>
-                    <button class="bg-white text-brand-dark px-8 py-3 rounded-full font-bold hover:bg-brand-pink hover:text-white transition">Pre-order for pickup</button>
+                    <button class="bg-brand-dark dark:bg-white text-white dark:text-brand-dark px-8 py-3 rounded-full font-bold hover:bg-brand-pink hover:text-white transition">Pre-order for pickup</button>
                 </div>
                 
                 <div class="order-1 lg:order-2 relative">
                     <div class="absolute -inset-4 bg-brand-blue/20 rounded-full blur-3xl z-0"></div>
-                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800" alt="Signature Dessert" class="relative z-10 w-full aspect-square object-cover rounded-full shadow-[0_0_50px_rgba(79,172,254,0.3)] border-4 border-gray-800">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800" alt="Signature Dessert" class="relative z-10 w-full aspect-square object-cover rounded-full shadow-[0_0_50px_rgba(79,172,254,0.3)] border-4 border-white dark:border-gray-800">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SECTION 3: Upcoming event calendar -->
-    <section class="py-24 bg-slate-900 text-white">
+    <section class="pt-24 pb-48 bg-brand-cream dark:bg-[#0f172a] text-brand-dark dark:text-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-heading font-bold mb-4">Where To Catch Us</h2>
-                <p class="text-gray-400">Our public schedule for the next two weeks.</p>
+                <p class="text-gray-600 dark:text-gray-400">Our public schedule for the next two weeks.</p>
             </div>
             
             <div class="space-y-6">
                 <!-- Event 1 -->
-                <div class="glass-dark rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 hover:border-brand-pink/50 transition">
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-transparent hover:border-brand-pink/50 transition shadow-sm hover:shadow-md">
                     <div class="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
                         <div class="bg-brand-pink/20 text-brand-pink rounded-xl p-4 min-w-[100px] text-center">
                             <span class="block text-sm uppercase font-bold">May</span>
@@ -150,16 +187,16 @@
                         </div>
                         <div>
                             <h4 class="text-2xl font-bold mb-2">Neon Lights Festival</h4>
-                            <p class="text-gray-400 mb-1"><i class="fa-solid fa-location-dot text-brand-blue mr-2"></i> Downtown Riverwalk</p>
+                            <p class="text-gray-600 dark:text-gray-400 mb-1"><i class="fa-solid fa-location-dot text-brand-blue mr-2"></i> Downtown Riverwalk</p>
                             <p class="text-gray-500 text-sm"><i class="fa-regular fa-clock mr-2"></i> 6:00 PM - 11:30 PM</p>
                         </div>
                     </div>
-                    <button class="px-6 py-2 border border-gray-600 rounded-full hover:bg-white hover:text-black transition whitespace-nowrap">Add to Calendar</button>
+                    <button class="px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-full hover:bg-brand-dark dark:hover:bg-white hover:text-white dark:hover:text-black transition whitespace-nowrap">Add to Calendar</button>
                 </div>
                 
                 <!-- Event 2 -->
-                <div class="glass-dark rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 hover:border-brand-blue/50 transition relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-brand-gold text-xs font-bold px-3 py-1 rounded-bl-lg">Selling Fast</div>
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-transparent hover:border-brand-blue/50 transition relative overflow-hidden shadow-sm hover:shadow-md">
+                    <div class="absolute top-0 right-0 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Selling Fast</div>
                     <div class="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
                         <div class="bg-brand-blue/20 text-brand-blue rounded-xl p-4 min-w-[100px] text-center">
                             <span class="block text-sm uppercase font-bold">May</span>
@@ -167,15 +204,15 @@
                         </div>
                         <div>
                             <h4 class="text-2xl font-bold mb-2">Food Truck Fridays</h4>
-                            <p class="text-gray-400 mb-1"><i class="fa-solid fa-location-dot text-brand-pink mr-2"></i> City Central Park</p>
+                            <p class="text-gray-600 dark:text-gray-400 mb-1"><i class="fa-solid fa-location-dot text-brand-pink mr-2"></i> City Central Park</p>
                             <p class="text-gray-500 text-sm"><i class="fa-regular fa-clock mr-2"></i> 5:00 PM - 10:00 PM</p>
                         </div>
                     </div>
-                    <button class="px-6 py-2 border border-gray-600 rounded-full hover:bg-white hover:text-black transition whitespace-nowrap">Add to Calendar</button>
+                    <button class="px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-full hover:bg-brand-dark dark:hover:bg-white hover:text-white dark:hover:text-black transition whitespace-nowrap">Add to Calendar</button>
                 </div>
                 
                 <!-- Event 3 -->
-                <div class="glass-dark rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 hover:border-brand-gold/50 transition">
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 border border-transparent hover:border-brand-gold/50 transition shadow-sm hover:shadow-md">
                     <div class="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
                         <div class="bg-brand-gold/20 text-brand-gold rounded-xl p-4 min-w-[100px] text-center">
                             <span class="block text-sm uppercase font-bold">May</span>
@@ -183,39 +220,39 @@
                         </div>
                         <div>
                             <h4 class="text-2xl font-bold mb-2">Summer Kickoff Block Party</h4>
-                            <p class="text-gray-400 mb-1"><i class="fa-solid fa-location-dot text-brand-blue mr-2"></i> Westside Market Area</p>
+                            <p class="text-gray-600 dark:text-gray-400 mb-1"><i class="fa-solid fa-location-dot text-brand-blue mr-2"></i> Westside Market Area</p>
                             <p class="text-gray-500 text-sm"><i class="fa-regular fa-clock mr-2"></i> 4:00 PM - 9:00 PM</p>
                         </div>
                     </div>
-                    <button class="px-6 py-2 border border-gray-600 rounded-full hover:bg-white hover:text-black transition whitespace-nowrap">Add to Calendar</button>
+                    <button class="px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-full hover:bg-brand-dark dark:hover:bg-white hover:text-white dark:hover:text-black transition whitespace-nowrap">Add to Calendar</button>
                 </div>
             </div>
             
             <div class="text-center mt-10">
-                <a href="#" class="text-brand-pink hover:text-white transition underline underline-offset-4">View Full Calendar</a>
+                <a href="#" class="text-brand-pink hover:text-brand-dark dark:hover:text-white transition underline underline-offset-4">View Full Calendar</a>
             </div>
         </div>
     </section>
 
     <!-- SECTION 4: Brand story timeline -->
-    <section class="py-24 bg-brand-dark text-white border-y border-gray-800">
+    <section class="py-24 bg-white dark:bg-slate-800 text-brand-dark dark:text-white border-y border-gray-100 dark:border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-heading font-bold mb-4">Our Sweet Journey</h2>
             </div>
             
-            <div class="relative border-l-2 border-gray-700 ml-4 md:ml-auto max-w-3xl mx-auto space-y-12 pb-8">
+            <div class="relative border-l-2 border-gray-200 dark:border-gray-700 ml-4 md:ml-auto max-w-3xl mx-auto space-y-12 pb-8">
                 <!-- Timeline Item 1 -->
                 <div class="relative pl-8 md:pl-0">
                     <div class="md:w-1/2 md:-ml-8 md:pr-12 md:text-right hidden md:block absolute top-0 left-0 transform -translate-x-full">
                         <h4 class="text-xl font-bold text-brand-pink">2022</h4>
-                        <p class="text-gray-400 text-sm mt-2">The Idea Sparks</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">The Idea Sparks</p>
                     </div>
                     <div class="absolute w-4 h-4 bg-brand-pink rounded-full -left-[9px] top-1 shadow-[0_0_10px_#ffb7b2]"></div>
                     <div class="md:w-1/2 md:pl-12 md:ml-auto">
                         <h4 class="text-xl font-bold text-brand-pink md:hidden mb-2">2022</h4>
-                        <div class="glass-dark p-6 rounded-2xl">
-                            <p class="text-gray-300">Started as a small pop-up tent experimenting with unconventional cotton candy flavors at local farmers markets.</p>
+                        <div class="bg-brand-cream dark:bg-slate-900 border border-gray-100 dark:border-gray-800 p-6 rounded-2xl shadow-sm">
+                            <p class="text-gray-600 dark:text-gray-300">Started as a small pop-up tent experimenting with unconventional cotton candy flavors at local farmers markets.</p>
                         </div>
                     </div>
                 </div>
@@ -224,13 +261,13 @@
                 <div class="relative pl-8 md:pl-0">
                     <div class="md:w-1/2 md:pl-12 md:ml-auto hidden md:block absolute top-0 right-0 transform translate-x-full">
                         <h4 class="text-xl font-bold text-brand-blue">2024</h4>
-                        <p class="text-gray-400 text-sm mt-2">The First Truck</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">The First Truck</p>
                     </div>
                     <div class="absolute w-4 h-4 bg-brand-blue rounded-full -left-[9px] top-1 shadow-[0_0_10px_#4facfe]"></div>
                     <div class="md:w-1/2 md:-ml-8 md:pr-12 md:text-right">
                         <h4 class="text-xl font-bold text-brand-blue md:hidden mb-2">2024</h4>
-                        <div class="glass-dark p-6 rounded-2xl">
-                            <p class="text-gray-300">Purchased our first vintage step-van and customized it with neon lights and a state-of-the-art prep kitchen.</p>
+                        <div class="bg-brand-cream dark:bg-slate-900 border border-gray-100 dark:border-gray-800 p-6 rounded-2xl shadow-sm">
+                            <p class="text-gray-600 dark:text-gray-300">Purchased our first vintage step-van and customized it with neon lights and a state-of-the-art prep kitchen.</p>
                         </div>
                     </div>
                 </div>
@@ -239,56 +276,56 @@
                 <div class="relative pl-8 md:pl-0">
                     <div class="md:w-1/2 md:-ml-8 md:pr-12 md:text-right hidden md:block absolute top-0 left-0 transform -translate-x-full">
                         <h4 class="text-xl font-bold text-brand-gold">2026</h4>
-                        <p class="text-gray-400 text-sm mt-2">Expansion & Catering</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">Expansion & Catering</p>
                     </div>
                     <div class="absolute w-4 h-4 bg-brand-gold rounded-full -left-[9px] top-1 shadow-[0_0_10px_#e2a95c]"></div>
                     <div class="md:w-1/2 md:pl-12 md:ml-auto">
                         <h4 class="text-xl font-bold text-brand-gold md:hidden mb-2">2026</h4>
-                        <div class="glass-dark p-6 rounded-2xl">
-                            <p class="text-gray-300">Launched our premium event catering service and expanded our menu to include gourmet loaded funnel cakes.</p>
+                        <div class="bg-brand-cream dark:bg-slate-900 border border-gray-100 dark:border-gray-800 p-6 rounded-2xl shadow-sm">
+                            <p class="text-gray-600 dark:text-gray-300">Launched our premium event catering service and expanded our menu to include gourmet loaded funnel cakes.</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="text-center mt-12">
-                <a href="about.html" class="inline-block border border-gray-600 px-8 py-3 rounded-full hover:bg-gray-800 transition">Read Full Story</a>
+                <a href="about.html" class="inline-block border border-gray-300 dark:border-gray-600 px-8 py-3 rounded-full hover:bg-gray-100 dark:hover:bg-slate-900 transition">Read Full Story</a>
             </div>
         </div>
     </section>
 
     <!-- SECTION 5: Instagram/social gallery -->
-    <section class="py-24 bg-slate-900 overflow-hidden">
+    <section class="py-24 bg-brand-cream dark:bg-[#0f172a] overflow-hidden text-brand-dark dark:text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 flex flex-col md:flex-row justify-between items-end gap-6">
             <div>
-                <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-2">Follow The Cloud</h2>
-                <p class="text-gray-400">Tag us @SugarCloudFoodTruck to be featured.</p>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-2">Follow The Cloud</h2>
+                <p class="text-gray-600 dark:text-gray-400">Tag us @CandyLoopFoodTruck to be featured.</p>
             </div>
-            <a href="#" class="flex items-center gap-2 text-brand-pink font-bold hover:text-white transition">
-                <i class="fa-brands fa-instagram text-xl"></i> @SugarCloudFoodTruck
+            <a href="#" class="flex items-center gap-2 text-brand-pink font-bold hover:text-brand-dark dark:hover:text-white transition">
+                <i class="fa-brands fa-instagram text-xl"></i> @CandyLoopFoodTruck
             </a>
         </div>
         
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
-            <div class="group relative aspect-square overflow-hidden rounded-xl">
+            <div class="group relative aspect-square overflow-hidden rounded-xl shadow-sm">
                 <img src="https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?q=80&w=400" alt="Insta 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                     <i class="fa-brands fa-instagram text-white text-3xl"></i>
                 </div>
             </div>
-            <div class="group relative aspect-square overflow-hidden rounded-xl md:mt-8">
+            <div class="group relative aspect-square overflow-hidden rounded-xl md:mt-8 shadow-sm">
                 <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=400" alt="Insta 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                     <i class="fa-brands fa-instagram text-white text-3xl"></i>
                 </div>
             </div>
-            <div class="group relative aspect-square overflow-hidden rounded-xl">
+            <div class="group relative aspect-square overflow-hidden rounded-xl shadow-sm">
                 <img src="https://images.unsplash.com/photo-1514517521153-1be72277b32f?q=80&w=400" alt="Insta 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                     <i class="fa-brands fa-instagram text-white text-3xl"></i>
                 </div>
             </div>
-            <div class="group relative aspect-square overflow-hidden rounded-xl md:mt-8">
+            <div class="group relative aspect-square overflow-hidden rounded-xl md:mt-8 shadow-sm">
                 <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=400" alt="Insta 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                     <i class="fa-brands fa-instagram text-white text-3xl"></i>
@@ -298,24 +335,23 @@
     </section>
 
     <!-- SECTION 6: Catering booking CTA -->
-    <section class="py-24 bg-brand-dark relative overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-20">
-            <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=1920" alt="Background" class="w-full h-full object-cover">
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent z-0"></div>
+    <section class="py-24 bg-brand-pink relative overflow-hidden">
+        <!-- Abstract shapes -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-blue opacity-20 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
         
         <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
-            <div class="w-20 h-20 mx-auto bg-brand-pink/20 rounded-full flex items-center justify-center mb-8">
-                <i class="fa-solid fa-calendar-check text-3xl text-brand-pink"></i>
+            <div class="w-20 h-20 mx-auto bg-white/20 rounded-full flex items-center justify-center mb-8">
+                <i class="fa-solid fa-calendar-check text-3xl text-white"></i>
             </div>
             <h2 class="text-4xl md:text-6xl font-heading font-bold text-white mb-6">Book The Truck</h2>
-            <p class="text-xl text-gray-300 mb-10">We require a $500 minimum for private bookings. Secure your date early for wedding season.</p>
+            <p class="text-xl text-white/90 mb-10">We require a $500 minimum for private bookings. Secure your date early for wedding season.</p>
             
-            <form class="max-w-2xl mx-auto bg-slate-900/80 backdrop-blur-md p-8 rounded-3xl border border-gray-700 text-left">
+            <form class="max-w-2xl mx-auto bg-white dark:bg-slate-900 shadow-2xl p-8 rounded-3xl text-left border border-gray-100 dark:border-gray-800">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-2">Event Type</label>
-                        <select class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-pink">
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-2">Event Type</label>
+                        <select class="w-full bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 text-brand-dark dark:text-white focus:outline-none focus:border-brand-pink focus:ring-1 focus:ring-brand-pink">
                             <option>Wedding</option>
                             <option>Corporate Event</option>
                             <option>Private Party</option>
@@ -323,8 +359,8 @@
                         </select>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-2">Guest Count</label>
-                        <select class="w-full bg-slate-800 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-pink">
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-2">Guest Count</label>
+                        <select class="w-full bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3 text-brand-dark dark:text-white focus:outline-none focus:border-brand-pink focus:ring-1 focus:ring-brand-pink">
                             <option>50 - 100</option>
                             <option>100 - 250</option>
                             <option>250 - 500</option>
@@ -332,24 +368,81 @@
                         </select>
                     </div>
                 </div>
-                <button type="button" class="w-full bg-brand-pink text-white font-bold py-4 rounded-xl hover:bg-brand-blue transition">Start Booking Request</button>
+                <button type="button" class="w-full bg-brand-dark dark:bg-brand-blue text-white font-bold py-4 rounded-xl hover:opacity-90 transition shadow-lg">Start Booking Request</button>
             </form>
         </div>
     </section>
 
-    <!-- Footer (Simplified dark theme footer) -->
-    <footer class="bg-[#0a0f1c] py-12 text-gray-500 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <a href="index.html" class="font-heading text-2xl font-bold text-white inline-flex items-center gap-2 mb-6">
-                <i class="fa-solid fa-cloud text-brand-pink"></i>
-                Sugar<span class="text-brand-pink">Cloud</span>
-            </a>
-            <div class="flex justify-center gap-6 mb-8">
-                <a href="#" class="hover:text-brand-pink transition">Instagram</a>
-                <a href="#" class="hover:text-brand-blue transition">Twitter</a>
-                <a href="#" class="hover:text-brand-gold transition">Facebook</a>
+    
+    
+
+    
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Info -->
+                <div>
+                    <a href="index.html" class="font-heading text-3xl font-bold text-white flex items-center gap-2 mb-6">
+                        <i class="fa-solid fa-cloud text-brand-pink"></i> Candy<span class="text-brand-pink">Loop</span>
+                    </a>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">Elevating the food truck experience with luxury cotton candy and extravagant loaded funnel cakes. We bring the sweet spectacle to you.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:bg-brand-pink hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:bg-brand-blue hover:text-white transition"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading text-xl">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="index.html" class="hover:text-brand-pink transition">Home</a></li>
+                        <li><a href="menu.html" class="hover:text-brand-pink transition">Our Menu</a></li>
+                        <li><a href="catering.html" class="hover:text-brand-pink transition">Catering</a></li>
+                        <li><a href="about.html" class="hover:text-brand-pink transition">Our Story</a></li>
+                        <li><a href="pricing.html" class="hover:text-brand-pink transition">Book The Truck</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading text-xl">Contact Us</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-brand-pink mt-1"></i>
+                            <span>123 Sugar Cloud Way,<br>San Francisco, CA 94105</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-blue"></i>
+                            <a href="tel:+15551234567" class="hover:text-white transition">(555) 123-4567</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-gold"></i>
+                            <a href="mailto:hello@candyloop.com" class="hover:text-white transition">hello@candyloop.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold mb-6 font-heading text-xl">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-4">Subscribe for secret menu items, location drops, and sweet deals.</p>
+                    <form class="flex flex-col gap-3">
+                        <input type="email" placeholder="Email Address" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-brand-pink transition text-sm">
+                        <button type="submit" class="w-full bg-brand-pink text-white rounded-lg px-4 py-2.5 font-bold hover:bg-opacity-90 transition shadow-md text-sm">Subscribe</button>
+                    </form>
+                </div>
             </div>
-            <p class="text-sm">&copy; 2026 Sugar Cloud Food Truck. All rights reserved.</p>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <p>&copy; 2026 CandyLoop Food Truck. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-slate-300 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-300 transition">Terms of Service</a>
+                </div>
+            </div>
         </div>
     </footer>
 

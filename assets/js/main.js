@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Sugar Dust Particles effect for hero section
+    // Candy Dust Particles effect for hero section
     const heroSection = document.querySelector('.hero-dust-container');
     if(heroSection) {
         for(let i=0; i<30; i++) {
@@ -78,3 +78,4 @@ document.addEventListener('DOMContentLoaded', () => {
         container.appendChild(particle);
     }
 });
+

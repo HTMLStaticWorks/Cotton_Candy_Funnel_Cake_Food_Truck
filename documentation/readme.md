@@ -1,4 +1,4 @@
-# Sugar Cloud Food Truck Template
+# CandyLoop Food Truck Template
 
 ## Overview
 This is a premium, modern, responsive HTML5 website template for a Cotton Candy & Funnel Cake Food Truck business. It features a luxury carnival aesthetic mixed with minimalist street-food branding.
@@ -9,11 +9,8 @@ This is a premium, modern, responsive HTML5 website template for a Cotton Candy 
 - `about.html`: About Us Page
 - `services.html`: Services Grid Page
 - `service-details.html`: Detailed Service Overview
-- `blog.html`: Blog Grid
-- `blog-details.html`: Blog Article
 - `contact.html`: Contact Form & Map
 - `pricing.html`: Packages & Pricing
-- `dashboard.html`: Admin Dashboard
 - `login-register.html`: Auth pages
 - `404.html`: Error Page
 - `coming-soon.html`: Pre-launch Countdown
@@ -31,3 +28,4 @@ This is a premium, modern, responsive HTML5 website template for a Cotton Candy 
 ## Editing
 To edit the colors, update the `tailwind.config` in the `<head>` of the HTML files.
 Custom CSS is located in `assets/css/style.css`.
+
