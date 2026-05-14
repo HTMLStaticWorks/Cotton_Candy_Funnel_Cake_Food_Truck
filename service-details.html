@@ -27,19 +27,19 @@
 <body class="antialiased transition-colors duration-300 dark:bg-slate-900 dark:text-white pt-20">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-white dark:bg-[#0f172a]">
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-slate-900 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="font-heading text-2xl font-bold text-brand-dark dark:text-white flex items-center gap-2 hover:opacity-80 transition">
+                    <a href="index.html" class="font-heading text-3xl font-bold text-white flex items-center gap-2 hover:opacity-80 transition">
                         <i class="fa-solid fa-cloud text-brand-pink"></i>
                         Candy<span class="text-brand-pink">Loop</span>
                     </a>
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center space-x-4 xl:space-x-8">
                     <div class="relative group">
                         <button class="flex items-center gap-1 text-brand-pink font-medium transition focus:outline-none py-2">
                             Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:-rotate-180"></i>
@@ -49,28 +49,36 @@
                             <a href="index-2.html" class="block px-4 py-3 text-brand-dark dark:text-gray-300 hover:bg-brand-pink/10 hover:text-brand-pink transition border-t border-gray-100 dark:border-gray-700">Home 2 (Night)</a>
                         </div>
                     </div>
-                    <a href="about.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">About</a>
-                    <a href="services.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Services</a>
-                    <a href="catering.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Catering</a>
-                    <a href="menu.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Menu</a>
-                    <a href="contact.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Contact</a>
+                    <a href="about.html" class="text-white hover:text-brand-pink transition">About</a>
+                    <a href="services.html" class="text-white hover:text-brand-pink transition">Services</a>
+                    <a href="catering.html" class="text-white hover:text-brand-pink transition">Catering</a>
+                    <a href="menu.html" class="text-white hover:text-brand-pink transition">Menu</a>
+                    <a href="contact.html" class="text-white hover:text-brand-pink transition">Contact</a>
                     
                     <!-- Theme Toggle -->
-                    <button class="theme-toggle text-brand-dark dark:text-gray-300 hover:text-brand-blue transition focus:outline-none" aria-label="Toggle Dark Mode">
+                    <button class="theme-toggle text-white hover:text-brand-blue transition focus:outline-none" aria-label="Toggle Dark Mode">
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:inline"></i>
                     </button>
+
+                    <!-- RTL Toggle -->
+                    <button class="rtl-toggle text-xs font-bold bg-white/10 text-white px-2 py-1 rounded hover:bg-brand-pink hover:text-white transition focus:outline-none uppercase" aria-label="Toggle RTL/LTR">
+                        RTL
+                    </button>
                     
-                    <a href="pricing.html" class="bg-brand-pink text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 shadow-lg hover-glow transition transform hover:-translate-y-0.5">Book Truck</a>
+                    <a href="bookings.html" class="bg-brand-pink text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 shadow-lg hover-glow transition transform hover:-translate-y-0.5">Bookings</a>
                 </div>
 
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center gap-4">
-                    <button class="theme-toggle text-brand-dark dark:text-gray-300" aria-label="Toggle Dark Mode">
+                <div class="lg:hidden flex items-center gap-4">
+                    <button class="rtl-toggle text-xs font-bold bg-white/10 text-white px-2 py-1 rounded transition focus:outline-none uppercase" aria-label="Toggle RTL/LTR">
+                        RTL
+                    </button>
+                    <button class="theme-toggle text-white" aria-label="Toggle Dark Mode">
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:inline"></i>
                     </button>
-                    <button id="mobile-menu-btn" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-pink focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -78,7 +86,7 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-[#0f172a] shadow-lg absolute w-full left-0 border-t border-gray-100 dark:border-gray-800">
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 shadow-lg absolute w-full left-0 border-t border-gray-800">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <div class="space-y-1">
                     <div class="px-3 py-2 text-brand-pink font-medium flex justify-between items-center cursor-pointer" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('-rotate-180')">
@@ -86,15 +94,15 @@
                     </div>
                     <div class="pl-6 space-y-1 pb-2">
                         <a href="index.html" class="block px-3 py-2 text-brand-pink font-medium">Home 1 (Main)</a>
-                        <a href="index-2.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Home 2 (Night)</a>
+                        <a href="index-2.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Home 2 (Night)</a>
                     </div>
                 </div>
-                <a href="about.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">About</a>
-                <a href="services.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Services</a>
-                <a href="catering.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Catering</a>
-                <a href="menu.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Menu</a>
-                <a href="contact.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Contact</a>
-                <a href="pricing.html" class="block w-full text-center mt-4 bg-brand-pink text-white px-6 py-3 rounded-full font-medium shadow-md">Book Truck</a>
+                <a href="about.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">About</a>
+                <a href="services.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Services</a>
+                <a href="catering.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Catering</a>
+                <a href="menu.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Menu</a>
+                <a href="contact.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Contact</a>
+                <a href="bookings.html" class="block w-full text-center mt-4 bg-brand-pink text-white px-6 py-3 rounded-full font-medium shadow-md">Bookings</a>
             </div>
         </div>
     </nav>
@@ -278,7 +286,7 @@
                         <li><a href="menu.html" class="hover:text-brand-pink transition">Our Menu</a></li>
                         <li><a href="catering.html" class="hover:text-brand-pink transition">Catering</a></li>
                         <li><a href="about.html" class="hover:text-brand-pink transition">Our Story</a></li>
-                        <li><a href="pricing.html" class="hover:text-brand-pink transition">Book The Truck</a></li>
+                        <li><a href="bookings.html" class="hover:text-brand-pink transition">Bookings</a></li>
                     </ul>
                 </div>
 

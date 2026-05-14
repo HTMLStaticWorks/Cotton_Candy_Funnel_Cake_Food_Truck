@@ -22,24 +22,24 @@
     </script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="antialiased transition-colors duration-300 dark:bg-slate-900 dark:text-white pt-20">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-white dark:bg-[#0f172a]">
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-slate-900 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="font-heading text-2xl font-bold text-brand-dark dark:text-white flex items-center gap-2 hover:opacity-80 transition">
+                    <a href="index.html" class="font-heading text-3xl font-bold text-white flex items-center gap-2 hover:opacity-80 transition">
                         <i class="fa-solid fa-cloud text-brand-pink"></i>
                         Candy<span class="text-brand-pink">Loop</span>
                     </a>
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center space-x-4 xl:space-x-8">
                     <div class="relative group">
                         <button class="flex items-center gap-1 text-brand-pink font-medium transition focus:outline-none py-2">
                             Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:-rotate-180"></i>
@@ -49,28 +49,36 @@
                             <a href="index-2.html" class="block px-4 py-3 text-brand-dark dark:text-gray-300 hover:bg-brand-pink/10 hover:text-brand-pink transition border-t border-gray-100 dark:border-gray-700">Home 2 (Night)</a>
                         </div>
                     </div>
-                    <a href="about.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">About</a>
-                    <a href="services.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Services</a>
-                    <a href="catering.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Catering</a>
-                    <a href="menu.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Menu</a>
-                    <a href="contact.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Contact</a>
+                    <a href="about.html" class="text-white hover:text-brand-pink transition">About</a>
+                    <a href="services.html" class="text-white hover:text-brand-pink transition">Services</a>
+                    <a href="catering.html" class="text-white hover:text-brand-pink transition">Catering</a>
+                    <a href="menu.html" class="text-white hover:text-brand-pink transition">Menu</a>
+                    <a href="contact.html" class="text-white hover:text-brand-pink transition">Contact</a>
                     
                     <!-- Theme Toggle -->
-                    <button class="theme-toggle text-brand-dark dark:text-gray-300 hover:text-brand-blue transition focus:outline-none" aria-label="Toggle Dark Mode">
+                    <button class="theme-toggle text-white hover:text-brand-blue transition focus:outline-none" aria-label="Toggle Dark Mode">
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:inline"></i>
                     </button>
+
+                    <!-- RTL Toggle -->
+                    <button class="rtl-toggle text-xs font-bold bg-white/10 text-white px-2 py-1 rounded hover:bg-brand-pink hover:text-white transition focus:outline-none uppercase" aria-label="Toggle RTL/LTR">
+                        RTL
+                    </button>
                     
-                    <a href="pricing.html" class="bg-brand-pink text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 shadow-lg hover-glow transition transform hover:-translate-y-0.5">Book Truck</a>
+                    <a href="bookings.html" class="bg-brand-pink text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 shadow-lg hover-glow transition transform hover:-translate-y-0.5">Bookings</a>
                 </div>
 
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center gap-4">
-                    <button class="theme-toggle text-brand-dark dark:text-gray-300" aria-label="Toggle Dark Mode">
+                <div class="lg:hidden flex items-center gap-4">
+                    <button class="rtl-toggle text-xs font-bold bg-white/10 text-white px-2 py-1 rounded transition focus:outline-none uppercase" aria-label="Toggle RTL/LTR">
+                        RTL
+                    </button>
+                    <button class="theme-toggle text-white" aria-label="Toggle Dark Mode">
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:inline"></i>
                     </button>
-                    <button id="mobile-menu-btn" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-pink focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -78,7 +86,7 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-[#0f172a] shadow-lg absolute w-full left-0 border-t border-gray-100 dark:border-gray-800">
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 shadow-lg absolute w-full left-0 border-t border-gray-800">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <div class="space-y-1">
                     <div class="px-3 py-2 text-brand-pink font-medium flex justify-between items-center cursor-pointer" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('-rotate-180')">
@@ -86,15 +94,15 @@
                     </div>
                     <div class="pl-6 space-y-1 pb-2">
                         <a href="index.html" class="block px-3 py-2 text-brand-pink font-medium">Home 1 (Main)</a>
-                        <a href="index-2.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Home 2 (Night)</a>
+                        <a href="index-2.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Home 2 (Night)</a>
                     </div>
                 </div>
-                <a href="about.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">About</a>
-                <a href="services.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Services</a>
-                <a href="catering.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Catering</a>
-                <a href="menu.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Menu</a>
-                <a href="contact.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Contact</a>
-                <a href="pricing.html" class="block w-full text-center mt-4 bg-brand-pink text-white px-6 py-3 rounded-full font-medium shadow-md">Book Truck</a>
+                <a href="about.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">About</a>
+                <a href="services.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Services</a>
+                <a href="catering.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Catering</a>
+                <a href="menu.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Menu</a>
+                <a href="contact.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Contact</a>
+                <a href="bookings.html" class="block w-full text-center mt-4 bg-brand-pink text-white px-6 py-3 rounded-full font-medium shadow-md">Bookings</a>
             </div>
         </div>
     </nav>
@@ -107,27 +115,52 @@
                 <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">We provide luxury dessert experiences tailored to your specific event needs.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service Card 1 -->
-                <div class="bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-lg hover:-translate-y-2 transition duration-300">
-                    <i class="fa-solid fa-truck text-4xl text-brand-pink mb-6"></i>
-                    <h3 class="text-2xl font-bold mb-3 dark:text-white">Full Truck Booking</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">Book our entire illuminated food truck for your large event. Includes our full menu, 3 staff members, and high-volume output capability.</p>
-                    <a href="service-details.html" class="text-brand-pink font-bold hover:underline">View Details &rarr;</a>
+            <div class="max-w-4xl mx-auto space-y-16 text-center lg:text-left">
+                <!-- Service 1 -->
+                <div class="group">
+                    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-4 mb-6">
+                        <i class="fa-solid fa-truck text-4xl text-brand-pink"></i>
+                        <h3 class="text-3xl font-heading font-bold dark:text-white">The Full Carnival Experience</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
+                        Our flagship service brings the complete CandyLoop fleet to your doorstep. This isn't just a food delivery; it's a mobile festival. Our fully illuminated, neon-accented truck serves as a vibrant backdrop for any large-scale event. From music festivals to massive corporate retreats, we provide the high-volume output necessary to keep the crowd happy without sacrificing the artisanal quality of our spins and cakes.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
+                        When you book the truck, you're getting a team of three professional artisans who manage everything from the power supply to the final cleanup. We bring our full menu of gourmet flavors, including seasonal specials and our famous "Midnight Cloud" signature item.
+                    </p>
+                    <a href="service-details.html" class="inline-flex items-center gap-2 text-brand-pink font-bold hover:gap-4 transition-all">Explore Full Truck Details <i class="fa-solid fa-arrow-right"></i></a>
+                    <div class="h-px bg-gray-200 dark:bg-gray-700 mt-12 w-full"></div>
                 </div>
-                <!-- Service Card 2 -->
-                <div class="bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-lg hover:-translate-y-2 transition duration-300">
-                    <i class="fa-solid fa-cart-flatbed text-4xl text-brand-blue mb-6"></i>
-                    <h3 class="text-2xl font-bold mb-3 dark:text-white">Indoor Cart Setup</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">Perfect for hotel ballrooms and indoor venues. A beautiful, sleek cart setup that brings the carnival indoors without the fumes.</p>
-                    <a href="service-details.html" class="text-brand-blue font-bold hover:underline">View Details &rarr;</a>
+
+                <!-- Service 2 -->
+                <div class="group">
+                    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-4 mb-6">
+                        <i class="fa-solid fa-cart-flatbed text-4xl text-brand-blue"></i>
+                        <h3 class="text-3xl font-heading font-bold dark:text-white">Artisanal Indoor Cart Setup</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
+                        Not every event happens outdoors, but every event deserves a touch of magic. Our sleek, custom-built indoor carts are designed to fit seamlessly into luxury venues, hotel ballrooms, and private residences. These setups are whisper-quiet and fume-free, focusing on the elegant presentation of our cotton candy spinning process.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
+                        The indoor cart experience is highly customizable, allowing us to match the cart's branding and the colors of the sugar to your specific event theme. It's an intimate, sophisticated way to bring a gourmet carnival vibe to your wedding reception or VIP cocktail hour.
+                    </p>
+                    <a href="service-details.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:gap-4 transition-all">Explore Indoor Cart Options <i class="fa-solid fa-arrow-right"></i></a>
+                    <div class="h-px bg-gray-200 dark:bg-gray-700 mt-12 w-full"></div>
                 </div>
-                <!-- Service Card 3 -->
-                <div class="bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-lg hover:-translate-y-2 transition duration-300">
-                    <i class="fa-solid fa-gift text-4xl text-brand-gold mb-6"></i>
-                    <h3 class="text-2xl font-bold mb-3 dark:text-white">Custom Party Favors</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">Pre-packaged gourmet cotton candy in custom branded tubs. Perfect for weddings, corporate gifting, or party bags.</p>
-                    <a href="service-details.html" class="text-brand-gold font-bold hover:underline">View Details &rarr;</a>
+
+                <!-- Service 3 -->
+                <div class="group">
+                    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-4 mb-6">
+                        <i class="fa-solid fa-gift text-4xl text-brand-gold"></i>
+                        <h3 class="text-3xl font-heading font-bold dark:text-white">Custom Gifting & Party Favors</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
+                        Give your guests a piece of the cloud to take home. Our custom gifting service specializes in pre-packaged, long-lasting gourmet cotton candy in elegant, reusable tubs. We offer full branding services, including custom-designed labels that incorporate your event's logo, wedding monogram, or corporate branding.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
+                        These are perfect for large-scale corporate gifts, wedding welcome bags, or high-end party favors. We use a proprietary sealing process that keeps the cotton candy fresh and fluffy for weeks, ensuring your guests enjoy the experience long after the event is over.
+                    </p>
+                    <a href="service-details.html" class="inline-flex items-center gap-2 text-brand-gold font-bold hover:gap-4 transition-all">Explore Gifting Collections <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -141,13 +174,13 @@
                     <div class="absolute inset-0 bg-brand-pink/20 rounded-full blur-3xl transform translate-x-10 translate-y-10"></div>
                     <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=800" alt="Wedding Catering" class="rounded-3xl shadow-xl relative z-10 w-full object-cover aspect-video">
                 </div>
-                <div class="w-full md:w-1/2">
+                <div class="w-full md:w-1/2 text-center md:text-left">
                     <h2 class="text-sm text-brand-pink font-bold tracking-widest uppercase mb-2">Specialty</h2>
                     <h3 class="text-4xl font-heading font-bold mb-6 dark:text-white">Wedding & VIP Receptions</h3>
                     <p class="text-gray-600 dark:text-gray-400 mb-6">
                         Make your special day unforgettable with our glowing cotton candy wands and miniature funnel cake bar. We work directly with your wedding planner to ensure the colors, flavors, and setup perfectly match your aesthetic.
                     </p>
-                    <ul class="space-y-3 mb-8">
+                    <ul class="space-y-3 mb-8 inline-block text-left">
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-pink"></i> Color-matched sugars</li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-pink"></i> Champagne-infused flavors</li>
                         <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-pink"></i> Formal attire staff</li>
@@ -161,25 +194,32 @@
     <section class="py-20 bg-brand-dark text-white text-center">
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="text-4xl font-heading font-bold mb-12">Transparent Pricing Highlights</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div class="border border-gray-700 rounded-2xl p-6 bg-slate-800/50">
-                    <h4 class="text-xl mb-2 font-bold text-brand-pink">Hourly Rate</h4>
-                    <p class="text-3xl font-heading mb-2">$250<span class="text-sm text-gray-400">/hr</span></p>
-                    <p class="text-sm text-gray-400">2-hour minimum. Includes unlimited basic spins.</p>
-                </div>
-                <div class="border border-gray-700 rounded-2xl p-6 bg-slate-800/50 scale-105 shadow-xl border-brand-blue">
-                    <h4 class="text-xl mb-2 font-bold text-brand-blue">Truck Minimum</h4>
-                    <p class="text-3xl font-heading mb-2">$500</p>
-                    <p class="text-sm text-gray-400">Required for Saturday night private bookings.</p>
-                </div>
-                <div class="border border-gray-700 rounded-2xl p-6 bg-slate-800/50">
-                    <h4 class="text-xl mb-2 font-bold text-brand-gold">Per Guest</h4>
-                    <p class="text-3xl font-heading mb-2">$8 - $15</p>
-                    <p class="text-sm text-gray-400">Varies based on gourmet toppings & add-ons.</p>
+            <div class="max-w-5xl mx-auto">
+                <div class="space-y-12 text-center md:text-left bg-slate-800/30 p-10 rounded-3xl border border-gray-700">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div>
+                            <h4 class="text-2xl font-bold text-brand-pink mb-4">Professional Hourly Rates</h4>
+                            <p class="text-gray-400 leading-relaxed mb-4 text-lg">
+                                For most events, we operate on a transparent hourly basis starting at <span class="text-white font-bold">$250 per hour</span>. This rate includes two of our expert artisans and unlimited basic spins for all your guests. We require a two-hour minimum for all bookings to ensure we can provide the full setup and service experience you expect from CandyLoop.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-bold text-brand-blue mb-4">Minimum Booking Requirements</h4>
+                            <p class="text-gray-400 leading-relaxed mb-4 text-lg">
+                                For high-demand time slots, specifically Friday and Saturday nights, we require a <span class="text-white font-bold">$500 minimum booking</span>. This ensures we can dedicate our full resources and the entire illuminated truck to your private event. For smaller weekday events, we offer flexible packages starting at lower entry points.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pt-8 border-t border-gray-700">
+                        <h4 class="text-2xl font-bold text-brand-gold mb-4">Gourmet Catering Per Guest</h4>
+                        <p class="text-gray-400 leading-relaxed text-lg">
+                            If you prefer a per-guest model for larger public events or corporate buyouts, our packages range from <span class="text-white font-bold">$8 to $15 per guest</span>. This tiered pricing allows you to choose between our standard artisan menu and our premium luxury selections, which include edible gold flakes, seasonal organic fruit infusions, and our signature glowing wands.
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="mt-10">
-                <a href="pricing.html" class="inline-block bg-white text-brand-dark px-8 py-3 rounded-full font-bold hover:bg-brand-pink hover:text-white transition">View Detailed Pricing</a>
+                <a href="bookings.html" class="inline-block bg-brand-pink text-white px-8 py-3 rounded-full font-bold hover:bg-brand-dark dark:hover:bg-white dark:hover:text-brand-dark transition shadow-lg hover-glow">View Booking Details</a>
             </div>
         </div>
     </section>
@@ -189,24 +229,24 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-heading font-bold text-center mb-16 dark:text-white">How To Book Us</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center relative">
                     <div class="w-16 h-16 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-2xl font-bold text-brand-pink shadow-md mx-auto mb-4 relative z-10">1</div>
                     <h4 class="font-bold text-lg mb-2 dark:text-white">Inquire</h4>
                     <p class="text-sm text-gray-600 dark:text-gray-400">Fill out our contact form with your event date and details.</p>
-                    <div class="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gray-300 dark:bg-gray-600 -z-0"></div>
+                    <div class="hidden lg:block absolute top-8 left-[60%] w-full h-[2px] bg-gray-300 dark:bg-gray-600 -z-0"></div>
                 </div>
                 <div class="text-center relative">
                     <div class="w-16 h-16 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-2xl font-bold text-brand-blue shadow-md mx-auto mb-4 relative z-10">2</div>
                     <h4 class="font-bold text-lg mb-2 dark:text-white">Consultation</h4>
                     <p class="text-sm text-gray-600 dark:text-gray-400">We hop on a quick call to discuss menus, themes, and logistics.</p>
-                    <div class="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gray-300 dark:bg-gray-600 -z-0"></div>
+                    <div class="hidden lg:block absolute top-8 left-[60%] w-full h-[2px] bg-gray-300 dark:bg-gray-600 -z-0"></div>
                 </div>
                 <div class="text-center relative">
                     <div class="w-16 h-16 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-2xl font-bold text-brand-gold shadow-md mx-auto mb-4 relative z-10">3</div>
                     <h4 class="font-bold text-lg mb-2 dark:text-white">Secure Date</h4>
                     <p class="text-sm text-gray-600 dark:text-gray-400">Sign the contract and pay the 50% deposit to lock in your date.</p>
-                    <div class="hidden md:block absolute top-8 left-[60%] w-full h-[2px] bg-gray-300 dark:bg-gray-600 -z-0"></div>
+                    <div class="hidden lg:block absolute top-8 left-[60%] w-full h-[2px] bg-gray-300 dark:bg-gray-600 -z-0"></div>
                 </div>
                 <div class="text-center">
                     <div class="w-16 h-16 bg-brand-pink text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-md mx-auto mb-4 relative z-10"><i class="fa-solid fa-check"></i></div>
@@ -246,7 +286,7 @@
                         <li><a href="menu.html" class="hover:text-brand-pink transition">Our Menu</a></li>
                         <li><a href="catering.html" class="hover:text-brand-pink transition">Catering</a></li>
                         <li><a href="about.html" class="hover:text-brand-pink transition">Our Story</a></li>
-                        <li><a href="pricing.html" class="hover:text-brand-pink transition">Book The Truck</a></li>
+                        <li><a href="bookings.html" class="hover:text-brand-pink transition">Bookings</a></li>
                     </ul>
                 </div>
 

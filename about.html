@@ -22,24 +22,24 @@
     </script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="antialiased transition-colors duration-300 dark:bg-slate-900 dark:text-white pt-20">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-white dark:bg-[#0f172a]">
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-slate-900 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="font-heading text-2xl font-bold text-brand-dark dark:text-white flex items-center gap-2 hover:opacity-80 transition">
+                    <a href="index.html" class="font-heading text-3xl font-bold text-white flex items-center gap-2 hover:opacity-80 transition">
                         <i class="fa-solid fa-cloud text-brand-pink"></i>
                         Candy<span class="text-brand-pink">Loop</span>
                     </a>
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center space-x-4 xl:space-x-8">
                     <div class="relative group">
                         <button class="flex items-center gap-1 text-brand-pink font-medium transition focus:outline-none py-2">
                             Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:-rotate-180"></i>
@@ -49,28 +49,36 @@
                             <a href="index-2.html" class="block px-4 py-3 text-brand-dark dark:text-gray-300 hover:bg-brand-pink/10 hover:text-brand-pink transition border-t border-gray-100 dark:border-gray-700">Home 2 (Night)</a>
                         </div>
                     </div>
-                    <a href="about.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">About</a>
-                    <a href="services.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Services</a>
-                    <a href="catering.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Catering</a>
-                    <a href="menu.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Menu</a>
-                    <a href="contact.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Contact</a>
+                    <a href="about.html" class="text-white hover:text-brand-pink transition">About</a>
+                    <a href="services.html" class="text-white hover:text-brand-pink transition">Services</a>
+                    <a href="catering.html" class="text-white hover:text-brand-pink transition">Catering</a>
+                    <a href="menu.html" class="text-white hover:text-brand-pink transition">Menu</a>
+                    <a href="contact.html" class="text-white hover:text-brand-pink transition">Contact</a>
                     
                     <!-- Theme Toggle -->
-                    <button class="theme-toggle text-brand-dark dark:text-gray-300 hover:text-brand-blue transition focus:outline-none" aria-label="Toggle Dark Mode">
+                    <button class="theme-toggle text-white hover:text-brand-blue transition focus:outline-none" aria-label="Toggle Dark Mode">
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:inline"></i>
                     </button>
+
+                    <!-- RTL Toggle -->
+                    <button class="rtl-toggle text-xs font-bold bg-white/10 text-white px-2 py-1 rounded hover:bg-brand-pink hover:text-white transition focus:outline-none uppercase" aria-label="Toggle RTL/LTR">
+                        RTL
+                    </button>
                     
-                    <a href="pricing.html" class="bg-brand-pink text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 shadow-lg hover-glow transition transform hover:-translate-y-0.5">Book Truck</a>
+                    <a href="bookings.html" class="bg-brand-pink text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 shadow-lg hover-glow transition transform hover:-translate-y-0.5">Bookings</a>
                 </div>
 
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center gap-4">
-                    <button class="theme-toggle text-brand-dark dark:text-gray-300" aria-label="Toggle Dark Mode">
+                <div class="lg:hidden flex items-center gap-4">
+                    <button class="rtl-toggle text-xs font-bold bg-white/10 text-white px-2 py-1 rounded transition focus:outline-none uppercase" aria-label="Toggle RTL/LTR">
+                        RTL
+                    </button>
+                    <button class="theme-toggle text-white" aria-label="Toggle Dark Mode">
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:inline"></i>
                     </button>
-                    <button id="mobile-menu-btn" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-pink focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -78,7 +86,7 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-[#0f172a] shadow-lg absolute w-full left-0 border-t border-gray-100 dark:border-gray-800">
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 shadow-lg absolute w-full left-0 border-t border-gray-800">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <div class="space-y-1">
                     <div class="px-3 py-2 text-brand-pink font-medium flex justify-between items-center cursor-pointer" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('-rotate-180')">
@@ -86,15 +94,15 @@
                     </div>
                     <div class="pl-6 space-y-1 pb-2">
                         <a href="index.html" class="block px-3 py-2 text-brand-pink font-medium">Home 1 (Main)</a>
-                        <a href="index-2.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Home 2 (Night)</a>
+                        <a href="index-2.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Home 2 (Night)</a>
                     </div>
                 </div>
-                <a href="about.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">About</a>
-                <a href="services.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Services</a>
-                <a href="catering.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Catering</a>
-                <a href="menu.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Menu</a>
-                <a href="contact.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Contact</a>
-                <a href="pricing.html" class="block w-full text-center mt-4 bg-brand-pink text-white px-6 py-3 rounded-full font-medium shadow-md">Book Truck</a>
+                <a href="about.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">About</a>
+                <a href="services.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Services</a>
+                <a href="catering.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Catering</a>
+                <a href="menu.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Menu</a>
+                <a href="contact.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Contact</a>
+                <a href="bookings.html" class="block w-full text-center mt-4 bg-brand-pink text-white px-6 py-3 rounded-full font-medium shadow-md">Bookings</a>
             </div>
         </div>
     </nav>
@@ -103,7 +111,7 @@
     <section class="py-20 bg-brand-cream dark:bg-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
+                <div class="text-center lg:text-left order-2 lg:order-1">
                     <h1 class="text-5xl font-heading font-bold text-brand-dark dark:text-white mb-6">Spreading Joy, <br><span class="text-brand-pink">One Cloud at a Time.</span></h1>
                     <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                         CandyLoop started in 2022 with a simple mission: to elevate the classic carnival treats we all love into a premium, gourmet experience. We believe that dessert isn't just about taste; it's about the spectacle, the nostalgia, and the aesthetic.
@@ -111,7 +119,7 @@
                     <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                         What began as a small pop-up tent has grown into the city's most sought-after luxury dessert truck. Our signature glowing cotton candy and artisanal loaded funnel cakes have been featured at hundreds of weddings, corporate galas, and exclusive VIP events.
                     </p>
-                    <div class="flex gap-6">
+                    <div class="flex justify-center lg:justify-start gap-6">
                         <div class="text-center">
                             <span class="block text-3xl font-heading font-bold text-brand-blue">50k+</span>
                             <span class="text-sm text-gray-500">Clouds Spun</span>
@@ -122,7 +130,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="relative">
+                <div class="relative order-1 lg:order-2">
                     <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=800" alt="Making Cotton Candy" class="rounded-3xl shadow-2xl relative z-10 w-full h-[500px] object-cover">
                     <div class="absolute -bottom-6 -left-6 bg-brand-pink w-48 h-48 rounded-full mix-blend-multiply opacity-50 blur-xl"></div>
                 </div>
@@ -134,27 +142,44 @@
     <section class="py-20 bg-white dark:bg-slate-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl font-heading font-bold text-brand-dark dark:text-white mb-16">Our Core Values</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-8 rounded-3xl bg-brand-cream dark:bg-slate-800 border border-transparent hover:border-brand-pink transition">
-                    <div class="w-16 h-16 bg-brand-pink/20 text-brand-pink rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+            <div class="max-w-4xl mx-auto space-y-16 text-center md:text-left">
+                <!-- Value 1 -->
+                <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                    <div class="flex-shrink-0 w-16 h-16 bg-brand-pink/20 text-brand-pink rounded-2xl flex items-center justify-center text-2xl">
                         <i class="fa-solid fa-wand-magic-sparkles"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 dark:text-white">Aesthetic First</h3>
-                    <p class="text-gray-600 dark:text-gray-400">We eat with our eyes first. Every dessert we serve is designed to be an Instagram-worthy masterpiece.</p>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 dark:text-white">Aesthetic-First Philosophy</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                            We believe that the experience of a dessert begins long before the first bite. In an era where every moment is shared, we prioritize the visual spectacle of our creations. From the way the sugar crystals catch the light to the precision of our toppings, every element is curated to be a masterpiece. We don't just serve food; we create edible art that demands to be photographed and shared.
+                        </p>
+                    </div>
                 </div>
-                <div class="p-8 rounded-3xl bg-brand-cream dark:bg-slate-800 border border-transparent hover:border-brand-blue transition">
-                    <div class="w-16 h-16 bg-brand-blue/20 text-brand-blue rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+
+                <!-- Value 2 -->
+                <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                    <div class="flex-shrink-0 w-16 h-16 bg-brand-blue/20 text-brand-blue rounded-2xl flex items-center justify-center text-2xl">
                         <i class="fa-solid fa-leaf"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 dark:text-white">Premium Ingredients</h3>
-                    <p class="text-gray-600 dark:text-gray-400">We use organic sugars, natural flavorings, and high-quality toppings. No artificial aftertastes.</p>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 dark:text-white">Uncompromising Ingredient Quality</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                            While our products look whimsical, our approach to ingredients is serious. We've spent years sourcing the finest organic sugars and natural fruit extracts to ensure that our flavors are as authentic as they are vibrant. We avoid the chemical aftertastes of mass-produced carnival snacks, opting instead for a clean, premium profile that satisfies even the most discerning palates.
+                        </p>
+                    </div>
                 </div>
-                <div class="p-8 rounded-3xl bg-brand-cream dark:bg-slate-800 border border-transparent hover:border-brand-gold transition">
-                    <div class="w-16 h-16 bg-brand-gold/20 text-brand-gold rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6">
+
+                <!-- Value 3 -->
+                <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                    <div class="flex-shrink-0 w-16 h-16 bg-brand-gold/20 text-brand-gold rounded-2xl flex items-center justify-center text-2xl">
                         <i class="fa-regular fa-face-smile-beam"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 dark:text-white">Creating Smiles</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Our ultimate goal is to bring out the inner child in every guest, delivering pure joy and nostalgia.</p>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 dark:text-white">The Joy of Shared Nostalgia</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+                            At the heart of CandyLoop is a desire to reconnect our guests with the pure, unadulterated joy of childhood. There is a specific magic in watching cotton candy being spun or smelling a fresh funnel cake that transcends age. We pride ourselves on being more than a vendor; we are facilitators of memories, bringing a touch of wonder to every wedding, corporate event, and street corner we visit.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -168,7 +193,7 @@
                 <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">The passionate team behind the sweetest truck in town.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 <!-- Team 1 -->
                 <div class="text-center group">
                     <div class="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-brand-pink group-hover:scale-105 transition">
@@ -188,7 +213,7 @@
                     <p class="text-sm text-gray-500 dark:text-gray-400 px-4">Develops all our wild funnel cake batter recipes and seasonal toppings.</p>
                 </div>
                 <!-- Team 3 -->
-                <div class="text-center group">
+                <div class="text-center group md:col-span-2 lg:col-span-1 md:w-1/2 md:mx-auto lg:w-full lg:mx-0">
                     <div class="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-6 border-4 border-brand-gold group-hover:scale-105 transition">
                         <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?q=80&w=400" alt="Events" class="w-full h-full object-cover">
                     </div>
@@ -244,7 +269,7 @@
                         <li><a href="menu.html" class="hover:text-brand-pink transition">Our Menu</a></li>
                         <li><a href="catering.html" class="hover:text-brand-pink transition">Catering</a></li>
                         <li><a href="about.html" class="hover:text-brand-pink transition">Our Story</a></li>
-                        <li><a href="pricing.html" class="hover:text-brand-pink transition">Book The Truck</a></li>
+                        <li><a href="bookings.html" class="hover:text-brand-pink transition">Bookings</a></li>
                     </ul>
                 </div>
 

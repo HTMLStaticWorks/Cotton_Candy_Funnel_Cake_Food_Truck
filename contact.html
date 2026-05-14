@@ -22,24 +22,24 @@
     </script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="antialiased transition-colors duration-300 dark:bg-slate-900 dark:text-white pt-20">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-white dark:bg-[#0f172a]">
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-slate-900 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="font-heading text-2xl font-bold text-brand-dark dark:text-white flex items-center gap-2 hover:opacity-80 transition">
+                    <a href="index.html" class="font-heading text-3xl font-bold text-white flex items-center gap-2 hover:opacity-80 transition">
                         <i class="fa-solid fa-cloud text-brand-pink"></i>
                         Candy<span class="text-brand-pink">Loop</span>
                     </a>
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center space-x-4 xl:space-x-8">
                     <div class="relative group">
                         <button class="flex items-center gap-1 text-brand-pink font-medium transition focus:outline-none py-2">
                             Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:-rotate-180"></i>
@@ -49,28 +49,36 @@
                             <a href="index-2.html" class="block px-4 py-3 text-brand-dark dark:text-gray-300 hover:bg-brand-pink/10 hover:text-brand-pink transition border-t border-gray-100 dark:border-gray-700">Home 2 (Night)</a>
                         </div>
                     </div>
-                    <a href="about.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">About</a>
-                    <a href="services.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Services</a>
-                    <a href="catering.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Catering</a>
-                    <a href="menu.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Menu</a>
-                    <a href="contact.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Contact</a>
+                    <a href="about.html" class="text-white hover:text-brand-pink transition">About</a>
+                    <a href="services.html" class="text-white hover:text-brand-pink transition">Services</a>
+                    <a href="catering.html" class="text-white hover:text-brand-pink transition">Catering</a>
+                    <a href="menu.html" class="text-white hover:text-brand-pink transition">Menu</a>
+                    <a href="contact.html" class="text-white hover:text-brand-pink transition">Contact</a>
                     
                     <!-- Theme Toggle -->
-                    <button class="theme-toggle text-brand-dark dark:text-gray-300 hover:text-brand-blue transition focus:outline-none" aria-label="Toggle Dark Mode">
+                    <button class="theme-toggle text-white hover:text-brand-blue transition focus:outline-none" aria-label="Toggle Dark Mode">
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:inline"></i>
                     </button>
+
+                    <!-- RTL Toggle -->
+                    <button class="rtl-toggle text-xs font-bold bg-white/10 text-white px-2 py-1 rounded hover:bg-brand-pink hover:text-white transition focus:outline-none uppercase" aria-label="Toggle RTL/LTR">
+                        RTL
+                    </button>
                     
-                    <a href="pricing.html" class="bg-brand-pink text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 shadow-lg hover-glow transition transform hover:-translate-y-0.5">Book Truck</a>
+                    <a href="bookings.html" class="bg-brand-pink text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 shadow-lg hover-glow transition transform hover:-translate-y-0.5">Bookings</a>
                 </div>
 
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center gap-4">
-                    <button class="theme-toggle text-brand-dark dark:text-gray-300" aria-label="Toggle Dark Mode">
+                <div class="lg:hidden flex items-center gap-4">
+                    <button class="rtl-toggle text-xs font-bold bg-white/10 text-white px-2 py-1 rounded transition focus:outline-none uppercase" aria-label="Toggle RTL/LTR">
+                        RTL
+                    </button>
+                    <button class="theme-toggle text-white" aria-label="Toggle Dark Mode">
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:inline"></i>
                     </button>
-                    <button id="mobile-menu-btn" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-pink focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -78,7 +86,7 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-[#0f172a] shadow-lg absolute w-full left-0 border-t border-gray-100 dark:border-gray-800">
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 shadow-lg absolute w-full left-0 border-t border-gray-800">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <div class="space-y-1">
                     <div class="px-3 py-2 text-brand-pink font-medium flex justify-between items-center cursor-pointer" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('-rotate-180')">
@@ -86,15 +94,15 @@
                     </div>
                     <div class="pl-6 space-y-1 pb-2">
                         <a href="index.html" class="block px-3 py-2 text-brand-pink font-medium">Home 1 (Main)</a>
-                        <a href="index-2.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Home 2 (Night)</a>
+                        <a href="index-2.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Home 2 (Night)</a>
                     </div>
                 </div>
-                <a href="about.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">About</a>
-                <a href="services.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Services</a>
-                <a href="catering.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Catering</a>
-                <a href="menu.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Menu</a>
-                <a href="contact.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Contact</a>
-                <a href="pricing.html" class="block w-full text-center mt-4 bg-brand-pink text-white px-6 py-3 rounded-full font-medium shadow-md">Book Truck</a>
+                <a href="about.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">About</a>
+                <a href="services.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Services</a>
+                <a href="catering.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Catering</a>
+                <a href="menu.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Menu</a>
+                <a href="contact.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Contact</a>
+                <a href="bookings.html" class="block w-full text-center mt-4 bg-brand-pink text-white px-6 py-3 rounded-full font-medium shadow-md">Bookings</a>
             </div>
         </div>
     </nav>
@@ -118,7 +126,7 @@
             <div>
                 <h2 class="text-3xl font-heading font-bold mb-8 dark:text-white">Send a Message</h2>
                 <form class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-6">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">First Name</label>
                             <input type="text" class="w-full bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-pink dark:text-white">
@@ -145,46 +153,46 @@
                         <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
                         <textarea rows="5" class="w-full bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand-pink dark:text-white"></textarea>
                     </div>
-                    <button type="button" class="w-full bg-brand-dark dark:bg-white text-white dark:text-brand-dark font-bold py-4 rounded-xl hover:bg-brand-pink dark:hover:bg-brand-pink dark:hover:text-white transition">Send Message</button>
+                    <button type="button" class="w-full bg-brand-dark dark:bg-white text-white dark:text-brand-dark font-bold py-4 rounded-xl hover:bg-brand-pink dark:hover:bg-brand-pink dark:hover:text-white transition transform hover:-translate-y-1 hover:shadow-2xl">Send Message</button>
                 </form>
             </div>
 
             <!-- SECTION 4: Contact details and social links -->
-            <div class="bg-brand-cream dark:bg-slate-800 p-10 rounded-3xl h-fit">
+            <div class="bg-brand-cream dark:bg-slate-800 p-10 rounded-3xl h-fit text-center flex flex-col items-center">
                 <h3 class="text-2xl font-heading font-bold mb-8 dark:text-white">Contact Info</h3>
                 
-                <div class="space-y-6 mb-10">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-brand-pink text-xl flex-shrink-0 shadow-sm"><i class="fa-solid fa-phone"></i></div>
+                <div class="space-y-8 mb-10 w-full">
+                    <div class="flex flex-col items-center gap-4 group p-4 rounded-2xl transition-all duration-300 hover:bg-white dark:hover:bg-slate-700/50 hover:shadow-sm">
+                        <div class="w-14 h-14 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-brand-pink text-2xl flex-shrink-0 shadow-sm group-hover:bg-brand-pink group-hover:text-white transition-colors duration-300"><i class="fa-solid fa-phone"></i></div>
                         <div>
-                            <h4 class="font-bold text-gray-900 dark:text-white">Phone</h4>
-                            <p class="text-gray-600 dark:text-gray-400">(555) 123-4567</p>
-                            <p class="text-sm text-gray-500">Mon-Fri, 9am - 5pm</p>
+                            <h4 class="font-bold text-gray-900 dark:text-white text-lg">Phone</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">(555) 123-4567</p>
+                            <p class="text-sm text-gray-500 mt-1">Mon-Fri, 9am - 5pm</p>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-brand-blue text-xl flex-shrink-0 shadow-sm"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="flex flex-col items-center gap-4 group p-4 rounded-2xl transition-all duration-300 hover:bg-white dark:hover:bg-slate-700/50 hover:shadow-sm">
+                        <div class="w-14 h-14 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-brand-blue text-2xl flex-shrink-0 shadow-sm group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300"><i class="fa-solid fa-envelope"></i></div>
                         <div>
-                            <h4 class="font-bold text-gray-900 dark:text-white">Email</h4>
-                            <p class="text-gray-600 dark:text-gray-400">hello@CandyLoop.com</p>
-                            <p class="text-sm text-gray-500">We aim to reply within 24h</p>
+                            <h4 class="font-bold text-gray-900 dark:text-white text-lg">Email</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">hello@CandyLoop.com</p>
+                            <p class="text-sm text-gray-500 mt-1">We aim to reply within 24h</p>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-brand-gold text-xl flex-shrink-0 shadow-sm"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="flex flex-col items-center gap-4 group p-4 rounded-2xl transition-all duration-300 hover:bg-white dark:hover:bg-slate-700/50 hover:shadow-sm">
+                        <div class="w-14 h-14 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-brand-gold text-2xl flex-shrink-0 shadow-sm group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300"><i class="fa-solid fa-location-dot"></i></div>
                         <div>
-                            <h4 class="font-bold text-gray-900 dark:text-white">HQ Office</h4>
-                            <p class="text-gray-600 dark:text-gray-400">123 Sweet Street<br>Dessert District, CA 90210</p>
-                            <p class="text-sm text-brand-pink font-medium mt-1">Truck location varies daily.</p>
+                            <h4 class="font-bold text-gray-900 dark:text-white text-lg">HQ Office</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">123 Sweet Street, Dessert District<br>San Francisco, CA 90210</p>
+                            <p class="text-sm text-brand-pink font-medium mt-2 italic">Truck location varies daily.</p>
                         </div>
                     </div>
                 </div>
 
-                <h4 class="font-bold text-lg mb-4 dark:text-white">Follow Us</h4>
-                <div class="flex gap-4">
-                    <a href="#" class="w-12 h-12 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-white hover:bg-brand-pink transition shadow-sm"><i class="fa-brands fa-instagram text-xl"></i></a>
-                    <a href="#" class="w-12 h-12 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-white hover:bg-brand-blue transition shadow-sm"><i class="fa-brands fa-twitter text-xl"></i></a>
-                    <a href="#" class="w-12 h-12 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-white hover:bg-brand-gold transition shadow-sm"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+                <h4 class="font-bold text-lg mb-6 dark:text-white tracking-widest uppercase text-sm">Follow Us</h4>
+                <div class="flex gap-6">
+                    <a href="#" class="w-14 h-14 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-white hover:bg-brand-pink hover:scale-110 hover:shadow-[0_0_20px_rgba(255,183,178,0.6)] transition-all duration-300 shadow-md"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                    <a href="#" class="w-14 h-14 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-white hover:bg-slate-900 hover:scale-110 hover:shadow-[0_0_20px_rgba(15,23,42,0.4)] transition-all duration-300 shadow-md"><i class="fa-brands fa-x-twitter text-2xl"></i></a>
+                    <a href="#" class="w-14 h-14 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-white hover:bg-[#1877F2] hover:scale-110 hover:shadow-[0_0_20px_rgba(24,119,242,0.4)] transition-all duration-300 shadow-md"><i class="fa-brands fa-facebook-f text-2xl"></i></a>
                 </div>
             </div>
         </div>
@@ -231,7 +239,7 @@
                         <li><a href="menu.html" class="hover:text-brand-pink transition">Our Menu</a></li>
                         <li><a href="catering.html" class="hover:text-brand-pink transition">Catering</a></li>
                         <li><a href="about.html" class="hover:text-brand-pink transition">Our Story</a></li>
-                        <li><a href="pricing.html" class="hover:text-brand-pink transition">Book The Truck</a></li>
+                        <li><a href="bookings.html" class="hover:text-brand-pink transition">Bookings</a></li>
                     </ul>
                 </div>
 

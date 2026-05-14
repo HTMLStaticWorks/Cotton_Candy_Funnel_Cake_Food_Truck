@@ -30,22 +30,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // RTL/LTR Toggle Logic
+    const rtlToggleBtns = document.querySelectorAll('.rtl-toggle');
+    
+    const updateRTLDisplay = (isRTL) => {
+        document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+        rtlToggleBtns.forEach(btn => {
+            btn.innerText = isRTL ? 'LTR' : 'RTL';
+        });
+    };
+
+    // Initial check
+    if (localStorage.dir === 'rtl') {
+        updateRTLDisplay(true);
+    }
+
+    rtlToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const isCurrentlyRTL = document.documentElement.dir === 'rtl';
+            const newRTL = !isCurrentlyRTL;
+            localStorage.dir = newRTL ? 'rtl' : 'ltr';
+            updateRTLDisplay(newRTL);
+        });
+    });
+
     // Sticky Navbar
     const navbar = document.getElementById('navbar');
     if (navbar) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 navbar.classList.add('shadow-md', 'backdrop-blur-md');
-                navbar.classList.replace('bg-white', 'bg-white/90');
-                if(document.documentElement.classList.contains('dark')) {
-                    navbar.classList.replace('dark:bg-[#0f172a]', 'dark:bg-[#0f172a]/90');
-                }
+                navbar.classList.replace('bg-slate-900', 'bg-slate-900/90');
             } else {
                 navbar.classList.remove('shadow-md', 'backdrop-blur-md');
-                navbar.classList.replace('bg-white/90', 'bg-white');
-                if(document.documentElement.classList.contains('dark')) {
-                    navbar.classList.replace('dark:bg-[#0f172a]/90', 'dark:bg-[#0f172a]');
-                }
+                navbar.classList.replace('bg-slate-900/90', 'bg-slate-900');
             }
         });
     }
@@ -77,5 +95,56 @@ document.addEventListener('DOMContentLoaded', () => {
         
         container.appendChild(particle);
     }
+
+    // Active Link Highlighting
+    const highlightActiveLink = () => {
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('#navbar div.hidden.md\\:flex a:not([href="bookings.html"]), #mobile-menu a:not([href="bookings.html"])');
+        
+        // Target the Home buttons specifically
+        const desktopHomeBtn = document.querySelector('#navbar .group button');
+        const mobileHomeBtn = document.querySelector('#mobile-menu .cursor-pointer');
+
+        // Reset Home buttons style initially
+        [desktopHomeBtn, mobileHomeBtn].forEach(btn => {
+            if (btn) {
+                btn.classList.remove('text-brand-pink', 'font-bold');
+                btn.classList.add('text-white');
+            }
+        });
+
+        navLinks.forEach(link => {
+            // Add hover underline class
+            link.classList.add('nav-link');
+            
+            // Remove any hardcoded active styles
+            link.classList.remove('text-brand-pink', 'bg-brand-pink/5', 'nav-link-active', 'font-bold', 'text-brand-dark');
+            link.classList.add('text-white');
+            
+            const href = link.getAttribute('href');
+            if (href === currentPath) {
+                // Apply active styles
+                link.classList.add('nav-link-active', 'text-brand-pink', 'font-bold');
+                link.classList.remove('text-white');
+                
+                // Add background for dropdown items if active
+                if (link.classList.contains('block')) {
+                    link.classList.add('bg-brand-pink/5');
+                }
+                
+                // If it's a child of Home dropdown, highlight Home buttons
+                if (href.includes('index')) {
+                    [desktopHomeBtn, mobileHomeBtn].forEach(btn => {
+                        if (btn) {
+                            btn.classList.add('text-brand-pink', 'font-bold');
+                            btn.classList.remove('text-white');
+                        }
+                    });
+                }
+            }
+        });
+    };
+
+    highlightActiveLink();
 });
 

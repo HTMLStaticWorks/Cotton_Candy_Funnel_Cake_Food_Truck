@@ -48,24 +48,24 @@
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="antialiased transition-colors duration-300 dark:bg-slate-900 dark:text-white">
 
     <!-- Navbar -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-white dark:bg-[#0f172a]">
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-slate-900 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="font-heading text-2xl font-bold text-brand-dark dark:text-white flex items-center gap-2 hover:opacity-80 transition">
+                    <a href="index.html" class="font-heading text-3xl font-bold text-white flex items-center gap-2 hover:opacity-80 transition">
                         <i class="fa-solid fa-cloud text-brand-pink"></i>
                         Candy<span class="text-brand-pink">Loop</span>
                     </a>
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center space-x-4 xl:space-x-8">
                     <div class="relative group">
                         <button class="flex items-center gap-1 text-brand-pink font-medium transition focus:outline-none py-2">
                             Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:-rotate-180"></i>
@@ -75,28 +75,36 @@
                             <a href="index-2.html" class="block px-4 py-3 text-brand-dark dark:text-gray-300 hover:bg-brand-pink/10 hover:text-brand-pink transition border-t border-gray-100 dark:border-gray-700">Home 2 (Night)</a>
                         </div>
                     </div>
-                    <a href="about.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">About</a>
-                    <a href="services.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Services</a>
-                    <a href="catering.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Catering</a>
-                    <a href="menu.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Menu</a>
-                    <a href="contact.html" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink dark:hover:text-brand-pink transition">Contact</a>
+                    <a href="about.html" class="text-white hover:text-brand-pink transition">About</a>
+                    <a href="services.html" class="text-white hover:text-brand-pink transition">Services</a>
+                    <a href="catering.html" class="text-white hover:text-brand-pink transition">Catering</a>
+                    <a href="menu.html" class="text-white hover:text-brand-pink transition">Menu</a>
+                    <a href="contact.html" class="text-white hover:text-brand-pink transition">Contact</a>
                     
                     <!-- Theme Toggle -->
-                    <button class="theme-toggle text-brand-dark dark:text-gray-300 hover:text-brand-blue transition focus:outline-none" aria-label="Toggle Dark Mode">
+                    <button class="theme-toggle text-white hover:text-brand-blue transition focus:outline-none" aria-label="Toggle Dark Mode">
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:inline"></i>
                     </button>
+
+                    <!-- RTL Toggle -->
+                    <button class="rtl-toggle text-xs font-bold bg-white/10 text-white px-2 py-1 rounded hover:bg-brand-pink hover:text-white transition focus:outline-none uppercase" aria-label="Toggle RTL/LTR">
+                        RTL
+                    </button>
                     
-                    <a href="pricing.html" class="bg-brand-pink text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 shadow-lg hover-glow transition transform hover:-translate-y-0.5">Book Truck</a>
+                    <a href="bookings.html" class="bg-brand-pink text-white px-6 py-2 rounded-full font-medium hover:bg-opacity-90 shadow-lg hover-glow transition transform hover:-translate-y-0.5">Bookings</a>
                 </div>
 
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center gap-4">
-                    <button class="theme-toggle text-brand-dark dark:text-gray-300" aria-label="Toggle Dark Mode">
+                <div class="lg:hidden flex items-center gap-4">
+                    <button class="rtl-toggle text-xs font-bold bg-white/10 text-white px-2 py-1 rounded transition focus:outline-none uppercase" aria-label="Toggle RTL/LTR">
+                        RTL
+                    </button>
+                    <button class="theme-toggle text-white" aria-label="Toggle Dark Mode">
                         <i class="fa-solid fa-moon dark:hidden"></i>
                         <i class="fa-solid fa-sun hidden dark:inline"></i>
                     </button>
-                    <button id="mobile-menu-btn" class="text-brand-dark dark:text-gray-300 hover:text-brand-pink focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-pink focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -104,7 +112,7 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-[#0f172a] shadow-lg absolute w-full left-0 border-t border-gray-100 dark:border-gray-800">
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 shadow-lg absolute w-full left-0 border-t border-gray-800">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <div class="space-y-1">
                     <div class="px-3 py-2 text-brand-pink font-medium flex justify-between items-center cursor-pointer" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('-rotate-180')">
@@ -112,15 +120,15 @@
                     </div>
                     <div class="pl-6 space-y-1 pb-2">
                         <a href="index.html" class="block px-3 py-2 text-brand-pink font-medium">Home 1 (Main)</a>
-                        <a href="index-2.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Home 2 (Night)</a>
+                        <a href="index-2.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Home 2 (Night)</a>
                     </div>
                 </div>
-                <a href="about.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">About</a>
-                <a href="services.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Services</a>
-                <a href="catering.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Catering</a>
-                <a href="menu.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Menu</a>
-                <a href="contact.html" class="block px-3 py-2 text-brand-dark dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Contact</a>
-                <a href="pricing.html" class="block w-full text-center mt-4 bg-brand-pink text-white px-6 py-3 rounded-full font-medium shadow-md">Book Truck</a>
+                <a href="about.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">About</a>
+                <a href="services.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Services</a>
+                <a href="catering.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Catering</a>
+                <a href="menu.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Menu</a>
+                <a href="contact.html" class="block px-3 py-2 text-white hover:bg-white/10 rounded-md">Contact</a>
+                <a href="bookings.html" class="block w-full text-center mt-4 bg-brand-pink text-white px-6 py-3 rounded-full font-medium shadow-md">Bookings</a>
             </div>
         </div>
     </nav>
@@ -136,7 +144,7 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="text-center lg:text-left">
+                <div class="text-center lg:text-left order-2 lg:order-1">
                     <span class="inline-block py-1 px-3 rounded-full bg-brand-pink/20 text-brand-pink text-sm font-semibold mb-4 tracking-wider uppercase">Luxury Street Dessert</span>
                     <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-brand-dark dark:text-white leading-tight mb-6">
                         Sweeten Your <br>
@@ -145,27 +153,20 @@
                     <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto lg:mx-0">
                         Experience the magic of gourmet cotton candy and artisanal funnel cakes. The ultimate dessert catering for weddings, parties, and festivals.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="pricing.html" class="bg-brand-dark dark:bg-white dark:text-brand-dark text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-brand-pink dark:hover:bg-brand-pink dark:hover:text-white transition transform hover:-translate-y-1 shadow-xl">Book For Event</a>
-                        <a href="#menu" class="glass text-brand-dark dark:text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-white/50 transition flex items-center justify-center gap-2">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+                        <a href="bookings.html" class="w-full sm:w-auto flex items-center justify-center bg-brand-dark dark:bg-white dark:text-brand-dark text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brand-pink dark:hover:bg-brand-pink dark:hover:text-white transition transform hover:-translate-y-1 shadow-xl">Book For Event</a>
+                        <a href="menu.html" class="w-full sm:w-auto flex items-center justify-center glass text-brand-dark dark:text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/50 transition gap-2">
                             <i class="fa-solid fa-ice-cream"></i> View Menu
                         </a>
                     </div>
                 </div>
-                <div class="relative mt-10 lg:mt-0">
+                <div class="relative mt-10 lg:mt-0 order-1 lg:order-2">
                     <div class="relative w-full aspect-square max-w-lg mx-auto">
                         <!-- Main Image -->
                         <div class="absolute inset-0 bg-gradient-primary rounded-full blur-2xl opacity-20 animate-pulse"></div>
                         <img src="assets/img/hero-cake.png" alt="Gourmet Funnel Cake" class="relative z-10 w-full h-full object-cover rounded-[3rem] shadow-2xl animate-float">
                         
-                        <!-- Floating Element 1 -->
-                        <div class="absolute -right-6 top-1/4 glass z-20 p-4 rounded-2xl shadow-xl animate-float-delayed flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center text-white text-xl">✨</div>
-                            <div>
-                                <p class="text-xs text-gray-500 dark:text-gray-400">Gourmet Flavors</p>
-                                <p class="font-heading font-bold text-brand-dark dark:text-white">20+ Options</p>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -182,7 +183,7 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div class="group bg-brand-cream dark:bg-slate-700 rounded-3xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-brand-pink/30">
+                <div class="group flex flex-col bg-brand-cream dark:bg-slate-700 rounded-3xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-brand-pink/30">
                     <div class="relative h-64 w-full rounded-2xl overflow-hidden mb-6">
                         <img src="assets/img/strawberry-cake.png" alt="Neon Strawberry Funnel Cake" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                         <div class="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-brand-dark dark:text-white font-bold text-sm">
@@ -191,11 +192,10 @@
                     </div>
                     <h4 class="text-2xl font-heading font-bold text-brand-dark dark:text-white mb-2">Neon Strawberry Cake</h4>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">Classic funnel cake topped with fresh strawberries, powdered sugar, and a neon pink glaze.</p>
-                    <button class="w-full py-3 rounded-xl border-2 border-brand-dark dark:border-white text-brand-dark dark:text-white font-semibold hover:bg-brand-dark hover:text-white dark:hover:bg-white dark:hover:text-brand-dark transition">Order Now</button>
+                    <button class="mt-auto w-full py-3 rounded-xl border-2 border-brand-dark dark:border-white text-brand-dark dark:text-white font-semibold hover:bg-brand-dark hover:text-white dark:hover:bg-white dark:hover:text-brand-dark transition">Order Now</button>
                 </div>
                 <!-- Card 2 -->
-                <div class="group bg-brand-cream dark:bg-slate-700 rounded-3xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-brand-blue/30 relative mt-0 lg:-mt-8">
-                    <div class="absolute -top-4 right-6 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow-lg">Bestseller</div>
+                <div class="group flex flex-col bg-brand-cream dark:bg-slate-700 rounded-3xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-brand-blue/30">
                     <div class="relative h-64 w-full rounded-2xl overflow-hidden mb-6">
                         <img src="https://images.unsplash.com/photo-1514517521153-1be72277b32f?q=80&w=600" alt="Galactic Cotton Candy" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                         <div class="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-brand-dark dark:text-white font-bold text-sm">
@@ -204,10 +204,10 @@
                     </div>
                     <h4 class="text-2xl font-heading font-bold text-brand-dark dark:text-white mb-2">Galactic Glow Cloud</h4>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">Swirls of blueberry and raspberry cotton candy spun onto an LED glowing wand.</p>
-                    <button class="w-full py-3 rounded-xl bg-brand-dark dark:bg-white text-white dark:text-brand-dark font-semibold hover:bg-brand-pink transition">Order Now</button>
+                    <button class="mt-auto w-full py-3 rounded-xl border-2 border-brand-dark dark:border-white text-brand-dark dark:text-white font-semibold hover:bg-brand-dark hover:text-white dark:hover:bg-white dark:hover:text-brand-dark transition">Order Now</button>
                 </div>
                 <!-- Card 3 -->
-                <div class="group bg-brand-cream dark:bg-slate-700 rounded-3xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-brand-gold/30">
+                <div class="group flex flex-col bg-brand-cream dark:bg-slate-700 rounded-3xl p-6 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-transparent hover:border-brand-gold/30 md:col-span-2 lg:col-span-1 md:w-1/2 md:mx-auto lg:w-full lg:mx-0">
                     <div class="relative h-64 w-full rounded-2xl overflow-hidden mb-6">
                         <img src="assets/img/caramel-cake.png" alt="Gourmet Caramel Funnel Cake" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                         <div class="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-brand-dark dark:text-white font-bold text-sm">
@@ -216,7 +216,7 @@
                     </div>
                     <h4 class="text-2xl font-heading font-bold text-brand-dark dark:text-white mb-2">Caramel Dream Cake</h4>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">Gourmet funnel cake loaded with sea salt caramel, toasted pecans, and vanilla bean cream.</p>
-                    <button class="w-full py-3 rounded-xl border-2 border-brand-dark dark:border-white text-brand-dark dark:text-white font-semibold hover:bg-brand-dark hover:text-white dark:hover:bg-white dark:hover:text-brand-dark transition">Order Now</button>
+                    <button class="mt-auto w-full py-3 rounded-xl border-2 border-brand-dark dark:border-white text-brand-dark dark:text-white font-semibold hover:bg-brand-dark hover:text-white dark:hover:bg-white dark:hover:text-brand-dark transition">Order Now</button>
                 </div>
             </div>
             
@@ -243,14 +243,14 @@
                     </div>
                 </div>
                 
-                <div>
+                <div class="text-center lg:text-left">
                     <h2 class="text-sm font-bold text-brand-pink tracking-widest uppercase mb-2">Event Catering</h2>
                     <h3 class="text-4xl md:text-5xl font-heading font-bold text-brand-dark dark:text-white mb-6">Bring the Carnival to Your Party</h3>
                     <p class="text-gray-600 dark:text-gray-400 mb-8">
                         Elevate your next event with our luxury dessert catering. From weddings to corporate events, we provide an unforgettable aesthetic and taste experience. We handle the setup, service, and cleanup.
                     </p>
                     
-                    <ul class="space-y-4 mb-8">
+                    <ul class="space-y-4 mb-8 inline-block text-left">
                         <li class="flex items-start gap-3">
                             <div class="mt-1 bg-brand-pink/20 p-1 rounded-full text-brand-pink">
                                 <i class="fa-solid fa-check text-sm"></i>
@@ -271,7 +271,9 @@
                         </li>
                     </ul>
                     
-                    <a href="services.html" class="bg-brand-dark dark:bg-white text-white dark:text-brand-dark px-8 py-4 rounded-full font-medium inline-block hover:shadow-lg transition">Explore Packages</a>
+                    <div class="mt-4">
+                        <a href="catering.html" class="bg-brand-dark dark:bg-white text-white dark:text-brand-dark px-8 py-4 rounded-full font-medium inline-block hover:shadow-lg transition">Explore Packages</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -306,8 +308,8 @@
                             <a href="#" class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-pink transition">
                                 <i class="fa-brands fa-instagram text-xl"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-brand-blue transition">
-                                <i class="fa-brands fa-twitter text-xl"></i>
+                            <a href="#" class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-slate-800 transition">
+                                <i class="fa-brands fa-x-twitter text-xl"></i>
                             </a>
                             <span class="text-sm text-gray-400">Follow for updates</span>
                         </div>
@@ -455,7 +457,7 @@
                         <li><a href="menu.html" class="hover:text-brand-pink transition">Our Menu</a></li>
                         <li><a href="catering.html" class="hover:text-brand-pink transition">Catering</a></li>
                         <li><a href="about.html" class="hover:text-brand-pink transition">Our Story</a></li>
-                        <li><a href="pricing.html" class="hover:text-brand-pink transition">Book The Truck</a></li>
+                        <li><a href="bookings.html" class="hover:text-brand-pink transition">Bookings</a></li>
                     </ul>
                 </div>
 
