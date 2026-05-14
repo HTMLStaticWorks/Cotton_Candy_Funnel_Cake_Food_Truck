@@ -125,7 +125,9 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.remove('text-brand-pink', 'bg-brand-pink/5', 'nav-link-active', 'font-bold');
             
             // Only add text-white if it's not a button-like link (e.g., Bookings)
-            if (!link.classList.contains('bg-brand-pink')) {
+            // and not a desktop dropdown item (which should use its own light/dark colors)
+            const isDropdownItem = link.closest('.group div');
+            if (!link.classList.contains('bg-brand-pink') && !isDropdownItem) {
                 link.classList.add('text-white');
             }
             
