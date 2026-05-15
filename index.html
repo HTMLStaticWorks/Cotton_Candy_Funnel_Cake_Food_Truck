@@ -56,21 +56,21 @@
     <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 bg-slate-900 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
+                <!-- Logo (Left) -->
+                <div class="flex-1 flex items-center">
                     <a href="index.html" class="font-heading text-3xl font-bold text-white flex items-center gap-2 hover:opacity-80 transition">
                         <i class="fa-solid fa-cloud text-brand-pink"></i>
                         Candy<span class="text-brand-pink">Loop</span>
                     </a>
                 </div>
                 
-                <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center space-x-4 xl:space-x-8">
+                <!-- Desktop Menu Links (Center) -->
+                <div class="hidden lg:flex items-center gap-4 xl:gap-8">
                     <div class="relative group">
                         <button class="flex items-center gap-1 text-white font-medium transition focus:outline-none py-2">
                             Home <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300 group-hover:-rotate-180"></i>
                         </button>
-                        <div class="absolute left-0 top-full mt-0 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top border border-gray-100 dark:border-gray-700 overflow-hidden z-50">
+                        <div class="absolute start-0 top-full mt-0 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top border border-gray-100 dark:border-gray-700 overflow-hidden z-50">
                             <a href="index.html" class="block px-4 py-3 text-brand-pink bg-brand-pink/5 hover:bg-brand-pink/10 transition">Home 1 (Main)</a>
                             <a href="index-2.html" class="block px-4 py-3 text-brand-dark dark:text-gray-300 hover:bg-brand-pink/10 hover:text-brand-pink transition border-t border-gray-100 dark:border-gray-700">Home 2 (Night)</a>
                         </div>
@@ -80,33 +80,37 @@
                     <a href="catering.html" class="text-white hover:text-brand-pink transition">Catering</a>
                     <a href="menu.html" class="text-white hover:text-brand-pink transition">Menu</a>
                     <a href="contact.html" class="text-white hover:text-brand-pink transition">Contact</a>
-                    
-                    <!-- Theme Toggle -->
-                    <button class="theme-toggle text-white hover:text-brand-blue transition focus:outline-none" aria-label="Toggle Dark Mode">
-                        <i class="fa-solid fa-moon dark:hidden"></i>
-                        <i class="fa-solid fa-sun hidden dark:inline"></i>
-                    </button>
-
-                    <!-- RTL Toggle -->
-                    <button class="rtl-toggle text-xs font-bold bg-white/10 text-white px-2 py-1 rounded hover:bg-brand-pink hover:text-white transition focus:outline-none uppercase" aria-label="Toggle RTL/LTR">
-                        RTL
-                    </button>
-                    
-                    <a href="bookings.html" class="bg-brand-pink text-white px-6 py-2 rounded-full font-medium hover:bg-white hover:text-brand-pink transition transform hover:-translate-y-0.5 shadow-lg hover-glow">Bookings</a>
                 </div>
 
-                <!-- Mobile menu button -->
-                <div class="lg:hidden flex items-center gap-4">
-                    <button class="rtl-toggle text-xs font-bold bg-white/10 text-white px-2 py-1 rounded transition focus:outline-none uppercase" aria-label="Toggle RTL/LTR">
-                        RTL
-                    </button>
-                    <button class="theme-toggle text-white" aria-label="Toggle Dark Mode">
-                        <i class="fa-solid fa-moon dark:hidden"></i>
-                        <i class="fa-solid fa-sun hidden dark:inline"></i>
-                    </button>
-                    <button id="mobile-menu-btn" class="text-white hover:text-brand-pink focus:outline-none">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                    </button>
+                <!-- Utilities (Right) -->
+                <div class="flex-1 flex items-center justify-end gap-4">
+                    <!-- Desktop Utilities -->
+                    <div class="hidden lg:flex items-center gap-4 xl:gap-8 me-2">
+                        <button class="theme-toggle text-white hover:text-brand-blue transition focus:outline-none" aria-label="Toggle Dark Mode">
+                            <i class="fa-solid fa-moon dark:hidden"></i>
+                            <i class="fa-solid fa-sun hidden dark:inline"></i>
+                        </button>
+
+                        <button class="rtl-toggle text-xs font-bold bg-white/10 text-white px-2 py-1 rounded hover:bg-brand-pink hover:text-white transition focus:outline-none uppercase" aria-label="Toggle RTL/LTR">
+                            RTL
+                        </button>
+                        
+                        <a href="bookings.html" class="bg-brand-pink text-white px-6 py-2 rounded-full font-medium hover:bg-white hover:text-brand-pink transition transform hover:-translate-y-0.5 shadow-lg hover-glow whitespace-nowrap">Bookings</a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="lg:hidden flex items-center gap-4">
+                        <button class="rtl-toggle text-xs font-bold bg-white/10 text-white px-2 py-1 rounded transition focus:outline-none uppercase" aria-label="Toggle RTL/LTR">
+                            RTL
+                        </button>
+                        <button class="theme-toggle text-white" aria-label="Toggle Dark Mode">
+                            <i class="fa-solid fa-moon dark:hidden"></i>
+                            <i class="fa-solid fa-sun hidden dark:inline"></i>
+                        </button>
+                        <button id="mobile-menu-btn" class="text-white hover:text-brand-pink focus:outline-none">
+                            <i class="fa-solid fa-bars text-2xl"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
