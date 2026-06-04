@@ -29,8 +29,11 @@
 
 
     <!-- Top Branding & Toggles -->
-    <div class="absolute top-8 left-8 z-50">
-        <a href="index.html" class="font-heading text-2xl font-bold text-brand-dark dark:text-white inline-flex items-center gap-2 hover:opacity-80 transition">
+    <div class="absolute top-8 left-8 z-50 flex items-center gap-6">
+        <button onclick="history.back()" class="flex items-center gap-2 bg-white dark:bg-slate-800 px-4 py-2 rounded-full shadow-md text-brand-dark dark:text-white font-medium hover:text-brand-pink hover:-translate-x-1 transition transform focus:outline-none text-sm">
+            <i class="fa-solid fa-arrow-left"></i> Back
+        </button>
+        <a href="index.html" class="hidden sm:flex font-heading text-2xl font-bold text-brand-dark dark:text-white items-center gap-2 hover:opacity-80 transition">
             <i class="fa-solid fa-cloud text-brand-pink text-3xl"></i>
             Candy<span class="text-brand-pink">Loop</span>
         </a>
