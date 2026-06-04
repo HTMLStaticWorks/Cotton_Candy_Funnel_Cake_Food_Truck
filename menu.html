@@ -13,9 +13,9 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: { pink: '#ffb7b2', cream: '#fbf8f1', gold: '#e2a95c', blue: '#4facfe', dark: '#1f2937' }
+                        brand: { pink: '#FF3B70', cream: '#FFF5F7', gold: '#D61C4E', blue: '#FF7597', dark: '#111827' }
                     },
-                    fontFamily: { heading: ['Fredoka', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+                    fontFamily: { heading: ['Plus Jakarta Sans', 'sans-serif'], body: ['Inter', 'sans-serif'] }
                 }
             }
         }
@@ -324,7 +324,52 @@
         </div>
     </section>
 
-    <!-- SECTION 6: CTA -->
+    <!-- SECTION 6: Customer Favorites Gallery -->
+    <section class="py-20 bg-brand-cream/50 dark:bg-slate-900 border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-brand-pink tracking-widest uppercase mb-2">Customer Favorites</h2>
+                <h3 class="text-4xl md:text-5xl font-heading font-bold text-brand-dark dark:text-white">Freshly Made Masterpieces</h3>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mt-4">Every creation is made fresh to order. Here's a glimpse of what our fans are loving right now.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <div class="col-span-2 row-span-2 relative rounded-3xl overflow-hidden shadow-lg group">
+                    <img src="assets/img/hero-cake.png" alt="Fresh Loaded Funnel Cake" class="w-full h-full object-cover aspect-square group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <span class="text-brand-pink font-bold text-sm mb-1">Fan Favorite</span>
+                        <h4 class="text-white text-xl font-bold">The Ultimate Strawberry</h4>
+                    </div>
+                </div>
+                <div class="relative rounded-3xl overflow-hidden shadow-lg group">
+                    <img src="assets/img/cotton_candy_menu.png" alt="Colorful Cotton Candy" class="w-full h-full object-cover aspect-square group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+                        <h4 class="text-white text-sm font-bold">Electric Blue Rasp</h4>
+                    </div>
+                </div>
+                <div class="relative rounded-3xl overflow-hidden shadow-lg group">
+                    <img src="assets/img/strawberry-cake.png" alt="Neon Strawberry Funnel Cake" class="w-full h-full object-cover aspect-square group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+                        <h4 class="text-white text-sm font-bold">Neon Glaze</h4>
+                    </div>
+                </div>
+                <div class="relative rounded-3xl overflow-hidden shadow-lg group">
+                    <img src="assets/img/caramel-cake.png" alt="Caramel Funnel Cake" class="w-full h-full object-cover aspect-square group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+                        <h4 class="text-white text-sm font-bold">Caramel Dream</h4>
+                    </div>
+                </div>
+                <div class="relative rounded-3xl overflow-hidden shadow-lg group">
+                    <img src="assets/img/ultimate_glow_package.png" alt="Glow Cotton Candy" class="w-full h-full object-cover aspect-square group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+                        <h4 class="text-white text-sm font-bold">Glow Cloud</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: CTA -->
     <section class="py-24 bg-brand-pink relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
             <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Craving Something Sweet?</h2>

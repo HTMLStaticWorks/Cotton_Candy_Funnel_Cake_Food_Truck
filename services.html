@@ -13,9 +13,9 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: { pink: '#ffb7b2', cream: '#fbf8f1', gold: '#e2a95c', blue: '#4facfe', dark: '#1f2937' }
+                        brand: { pink: '#FF3B70', cream: '#FFF5F7', gold: '#D61C4E', blue: '#FF7597', dark: '#111827' }
                     },
-                    fontFamily: { heading: ['Fredoka', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+                    fontFamily: { heading: ['Plus Jakarta Sans', 'sans-serif'], body: ['Inter', 'sans-serif'] }
                 }
             }
         }
@@ -111,72 +111,80 @@
         </div>
     </nav>
 
-    <!-- SECTION 1: Services Grid -->
-    <section class="py-20 bg-brand-cream dark:bg-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h1 class="text-5xl font-heading font-bold text-brand-dark dark:text-white mb-4">Our Services</h1>
-                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">We provide luxury dessert experiences tailored to your specific event needs.</p>
+    <!-- SECTION 1: Immersive Services -->
+    <section class="bg-brand-cream dark:bg-slate-800">
+        
+        <!-- Service 1 (Full Bleed Background) -->
+        <div class="relative min-h-[80vh] flex items-center justify-center py-20 px-4">
+            <div class="absolute inset-0">
+                <img src="assets/img/truck_night_festival.png" alt="Food Truck Night Festival" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/60"></div>
             </div>
             
-            <div class="max-w-4xl mx-auto space-y-16 text-center lg:text-left">
-                <!-- Service 1 -->
-                <div class="group">
-                    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-4 mb-6">
-                        <i class="fa-solid fa-truck text-4xl text-brand-pink"></i>
-                        <h3 class="text-3xl font-heading font-bold dark:text-white">The Full Carnival Experience</h3>
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
-                        Our flagship service brings the complete CandyLoop fleet to your doorstep. This isn't just a food delivery; it's a mobile festival. Our fully illuminated, neon-accented truck serves as a vibrant backdrop for any large-scale event. From music festivals to massive corporate retreats, we provide the high-volume output necessary to keep the crowd happy without sacrificing the artisanal quality of our spins and cakes.
-                    </p>
-                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
-                        When you book the truck, you're getting a team of three professional artisans who manage everything from the power supply to the final cleanup. We bring our full menu of gourmet flavors, including seasonal specials and our famous "Midnight Cloud" signature item.
-                    </p>
-                    <a href="service-details.html" class="inline-flex items-center gap-2 text-brand-pink font-bold hover:gap-4 transition-all">Explore Full Truck Details <i class="fa-solid fa-arrow-right"></i></a>
-                    <div class="h-px bg-gray-200 dark:bg-gray-700 mt-12 w-full"></div>
+            <div class="relative z-10 max-w-4xl mx-auto text-center bg-white/10 dark:bg-black/30 backdrop-blur-md p-10 md:p-16 rounded-3xl border border-white/20 shadow-2xl">
+                <div class="w-16 h-16 mx-auto bg-brand-pink text-white rounded-full flex items-center justify-center text-2xl mb-6">
+                    <i class="fa-solid fa-truck"></i>
                 </div>
+                <h3 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">The Full Carnival Experience</h3>
+                <p class="text-white/90 text-lg md:text-xl leading-relaxed mb-8 font-light">
+                    Our flagship service brings the complete CandyLoop fleet to your doorstep. This isn't just a food delivery; it's a mobile festival. Our fully illuminated, neon-accented truck serves as a vibrant backdrop for any large-scale event. From music festivals to massive corporate retreats, we provide the high-volume output necessary to keep the crowd happy without sacrificing artisanal quality.
+                </p>
+                <a href="bookings.html" class="inline-block bg-brand-pink text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-brand-pink transition transform hover:-translate-y-1 shadow-xl">Book The Truck</a>
+            </div>
+        </div>
 
-                <!-- Service 2 -->
-                <div class="group">
-                    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-4 mb-6">
-                        <i class="fa-solid fa-cart-flatbed text-4xl text-brand-blue"></i>
-                        <h3 class="text-3xl font-heading font-bold dark:text-white">Artisanal Indoor Cart Setup</h3>
+        <!-- Service 2 (Split Screen Left Image) -->
+        <div class="flex flex-col lg:flex-row min-h-[70vh]">
+            <div class="lg:w-1/2 relative h-96 lg:h-auto">
+                <img src="assets/img/truck_serving_cotton_candy.png" alt="Serving Cotton Candy" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="lg:w-1/2 flex items-center justify-center p-10 md:p-20 bg-white dark:bg-slate-900">
+                <div class="max-w-xl">
+                    <div class="flex items-center gap-4 mb-6">
+                        <i class="fa-solid fa-cart-flatbed text-3xl text-brand-blue"></i>
+                        <h3 class="text-4xl font-heading font-bold dark:text-white">Artisanal Indoor Cart</h3>
                     </div>
                     <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
                         Not every event happens outdoors, but every event deserves a touch of magic. Our sleek, custom-built indoor carts are designed to fit seamlessly into luxury venues, hotel ballrooms, and private residences. These setups are whisper-quiet and fume-free, focusing on the elegant presentation of our cotton candy spinning process.
                     </p>
-                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
-                        The indoor cart experience is highly customizable, allowing us to match the cart's branding and the colors of the sugar to your specific event theme. It's an intimate, sophisticated way to bring a gourmet carnival vibe to your wedding reception or VIP cocktail hour.
+                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-8">
+                        The indoor cart experience is highly customizable, allowing us to match the cart's branding and the colors of the sugar to your specific event theme.
                     </p>
-                    <a href="service-details.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:gap-4 transition-all">Explore Indoor Cart Options <i class="fa-solid fa-arrow-right"></i></a>
-                    <div class="h-px bg-gray-200 dark:bg-gray-700 mt-12 w-full"></div>
+                    <a href="service-details.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:gap-4 transition-all text-lg">Explore Cart Options <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
+            </div>
+        </div>
 
-                <!-- Service 3 -->
-                <div class="group">
-                    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-4 mb-6">
-                        <i class="fa-solid fa-gift text-4xl text-brand-gold"></i>
-                        <h3 class="text-3xl font-heading font-bold dark:text-white">Custom Gifting & Party Favors</h3>
+        <!-- Service 3 (Split Screen Right Image) -->
+        <div class="flex flex-col lg:flex-row-reverse min-h-[70vh]">
+            <div class="lg:w-1/2 relative h-96 lg:h-auto">
+                <img src="assets/img/truck_serving_funnel_cake.png" alt="Serving Funnel Cake" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="lg:w-1/2 flex items-center justify-center p-10 md:p-20 bg-brand-cream dark:bg-slate-800">
+                <div class="max-w-xl">
+                    <div class="flex items-center gap-4 mb-6">
+                        <i class="fa-solid fa-gift text-3xl text-brand-gold"></i>
+                        <h3 class="text-4xl font-heading font-bold dark:text-white">Custom Gifting</h3>
                     </div>
                     <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
                         Give your guests a piece of the cloud to take home. Our custom gifting service specializes in pre-packaged, long-lasting gourmet cotton candy in elegant, reusable tubs. We offer full branding services, including custom-designed labels that incorporate your event's logo, wedding monogram, or corporate branding.
                     </p>
-                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-6">
-                        These are perfect for large-scale corporate gifts, wedding welcome bags, or high-end party favors. We use a proprietary sealing process that keeps the cotton candy fresh and fluffy for weeks, ensuring your guests enjoy the experience long after the event is over.
+                    <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-8">
+                        We use a proprietary sealing process that keeps the cotton candy fresh and fluffy for weeks, ensuring your guests enjoy the experience long after the event is over.
                     </p>
-                    <a href="service-details.html" class="inline-flex items-center gap-2 text-brand-gold font-bold hover:gap-4 transition-all">Explore Gifting Collections <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="service-details.html" class="inline-flex items-center gap-2 text-brand-gold font-bold hover:gap-4 transition-all text-lg">Explore Gifting <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
-    </section>
 
+    </section>
     <!-- SECTION 2: Catering/event services showcase -->
     <section class="py-20 bg-white dark:bg-slate-900 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="w-full lg:w-1/2 relative">
                     <div class="absolute inset-0 bg-brand-pink/20 rounded-full blur-3xl transform translate-x-10 translate-y-10"></div>
-                    <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=800" alt="Wedding Catering" class="rounded-3xl shadow-xl relative z-10 w-full object-cover aspect-video">
+                    <img src="assets/img/sweet_start_package.png" alt="Wedding Catering" class="rounded-3xl shadow-xl relative z-10 w-full object-cover aspect-video">
                 </div>
                 <div class="w-full lg:w-1/2 text-center lg:text-left">
                     <h2 class="text-sm text-brand-pink font-bold tracking-widest uppercase mb-2">Specialty</h2>

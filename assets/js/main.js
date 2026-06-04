@@ -51,10 +51,31 @@ document.addEventListener('DOMContentLoaded', () => {
             const newRTL = !isCurrentlyRTL;
             localStorage.dir = newRTL ? 'rtl' : 'ltr';
             updateRTLDisplay(newRTL);
+            // Swap review slider arrow icons to match reading direction
+            const arrowNext = document.querySelector('.reviews-arrow-next');
+            const arrowPrev = document.querySelector('.reviews-arrow-prev');
+            if (arrowNext && arrowPrev) {
+                if (newRTL) {
+                    arrowNext.classList.replace('fa-chevron-right', 'fa-chevron-left');
+                    arrowPrev.classList.replace('fa-chevron-left', 'fa-chevron-right');
+                } else {
+                    arrowNext.classList.replace('fa-chevron-left', 'fa-chevron-right');
+                    arrowPrev.classList.replace('fa-chevron-right', 'fa-chevron-left');
+                }
+            }
         });
     });
 
-    // Sticky Navbar
+    // Also swap arrow icons on initial RTL load
+    if (localStorage.dir === 'rtl') {
+        const arrowNext = document.querySelector('.reviews-arrow-next');
+        const arrowPrev = document.querySelector('.reviews-arrow-prev');
+        if (arrowNext && arrowPrev) {
+            arrowNext.classList.replace('fa-chevron-right', 'fa-chevron-left');
+            arrowPrev.classList.replace('fa-chevron-left', 'fa-chevron-right');
+        }
+    }
+
     const navbar = document.getElementById('navbar');
     if (navbar) {
         window.addEventListener('scroll', () => {
@@ -174,6 +195,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Review Slider Navigation
+    const reviewsSlider = document.getElementById('reviews-slider');
+    const reviewsPrev = document.getElementById('reviews-prev');
+    const reviewsNext = document.getElementById('reviews-next');
+
+    if (reviewsSlider && reviewsPrev && reviewsNext) {
+        const SLIDE_WIDTH = 344; // 320px card + 24px gap
+        reviewsPrev.addEventListener('click', () => {
+            const isRTL = document.documentElement.dir === 'rtl';
+            reviewsSlider.scrollBy({ left: isRTL ? SLIDE_WIDTH : -SLIDE_WIDTH, behavior: 'smooth' });
+        });
+        reviewsNext.addEventListener('click', () => {
+            const isRTL = document.documentElement.dir === 'rtl';
+            reviewsSlider.scrollBy({ left: isRTL ? -SLIDE_WIDTH : SLIDE_WIDTH, behavior: 'smooth' });
+        });
+    }
+
     highlightActiveLink();
 });
-

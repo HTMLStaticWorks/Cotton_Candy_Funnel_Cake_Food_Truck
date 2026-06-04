@@ -14,18 +14,9 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            pink: '#ffb7b2',
-                            cream: '#fbf8f1',
-                            gold: '#e2a95c',
-                            blue: '#4facfe',
-                            dark: '#1f2937'
-                        }
+                        brand: { pink: '#FF3B70', cream: '#FFF5F7', gold: '#D61C4E', blue: '#FF7597', dark: '#111827' }
                     },
-                    fontFamily: {
-                        heading: ['Fredoka', 'sans-serif'],
-                        body: ['Inter', 'sans-serif']
-                    }
+                    fontFamily: { heading: ['Plus Jakarta Sans', 'sans-serif'], body: ['Inter', 'sans-serif'] }
                 }
             }
         }
@@ -125,63 +116,117 @@
         </div>
     </nav>
 
-    <!-- SECTION 1: Niche hero banner -->
+    <!-- SECTION 1: Classic Hero -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=1920" alt="Dark aesthetic dessert" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/60"></div>
+            <img src="assets/img/hero-cake.png" alt="Luxury Dessert Food Truck" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-brand-dark/70"></div>
         </div>
         
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
-            <h1 class="text-6xl md:text-8xl font-heading font-bold text-white mb-6 uppercase tracking-wider">
-                Night <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-pink to-brand-blue">Carnival</span>
+            <h1 class="text-5xl md:text-7xl font-heading font-bold text-white mb-6 uppercase tracking-wider">
+                Gourmet Cotton Candy <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-pink to-brand-blue">& Funnel Cakes</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-10 font-light tracking-wide">The premier late-night dessert truck experience.</p>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 font-light tracking-wide">Elevating the food truck experience with spectacular, luxury desserts.</p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="#signature" class="bg-brand-pink text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-brand-pink transition transform hover:-translate-y-1 shadow-2xl">Discover Flavors</a>
+                <a href="menu.html" class="bg-brand-pink text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-brand-pink transition transform hover:-translate-y-1 shadow-2xl">View Menu</a>
+                <a href="catering.html" class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-brand-dark transition transform hover:-translate-y-1">Book The Truck</a>
             </div>
         </div>
         
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#signature" class="text-white/50 hover:text-white transition">
+            <a href="#about" class="text-white/50 hover:text-white transition">
                 <i class="fa-solid fa-chevron-down text-2xl"></i>
             </a>
         </div>
     </section>
 
-    <!-- SECTION 2: Signature dessert showcase -->
-    <section id="signature" class="py-24 bg-white dark:bg-slate-800 text-brand-dark dark:text-white">
+    <!-- SECTION 2: Who We Are -->
+    <section id="about" class="py-24 bg-white dark:bg-slate-800 text-brand-dark dark:text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="order-2 lg:order-1 text-center lg:text-left">
-                    <h2 class="text-brand-blue font-bold tracking-widest uppercase mb-2">Signature Item</h2>
-                    <h3 class="text-5xl font-heading font-bold mb-6">The Midnight Cloud</h3>
-                    <p class="text-gray-600 dark:text-gray-400 mb-8 text-lg leading-relaxed">
-                        Our award-winning creation. Activated charcoal waffle cone, filled with midnight-berry artisan cotton candy, dusted with edible gold flakes, and illuminated with a food-safe glowing wand. 
-                    </p>
-                    <div class="flex items-center justify-center lg:justify-start gap-6 mb-8">
-                        <div>
-                            <span class="block text-3xl font-heading font-bold text-brand-gold">$15</span>
-                            <span class="text-xs text-gray-500 uppercase tracking-widest">Per Cone</span>
-                        </div>
-                        <div class="h-12 w-px bg-gray-300 dark:bg-gray-700"></div>
-                        <div class="flex gap-2">
-                            <span class="bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded text-sm text-gray-700 dark:text-gray-300">Vegan</span>
-                            <span class="bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded text-sm text-gray-700 dark:text-gray-300">Gluten-Free Option</span>
-                        </div>
-                    </div>
-                    <a href="bookings.html" class="inline-block bg-brand-dark dark:bg-white text-white dark:text-brand-dark px-8 py-3 rounded-full font-bold hover:bg-brand-pink hover:text-white transition transform hover:-translate-y-1 shadow-xl">Pre-order for pickup</a>
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-brand-pink/20 rounded-full blur-3xl z-0"></div>
+                    <img src="assets/img/cotton_candy_menu.png" alt="CandyLoop Team" class="relative z-10 w-full aspect-[4/3] object-cover rounded-3xl shadow-2xl border-4 border-white dark:border-gray-800">
                 </div>
-                
-                <div class="order-1 lg:order-2 relative">
-                    <div class="absolute -inset-4 bg-brand-blue/20 rounded-full blur-3xl z-0"></div>
-                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800" alt="Signature Dessert" class="relative z-10 w-full aspect-square object-cover rounded-full shadow-[0_0_50px_rgba(79,172,254,0.3)] border-4 border-white dark:border-gray-800">
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h2 class="text-brand-pink font-bold tracking-widest uppercase mb-2">Our Story</h2>
+                    <h3 class="text-4xl font-heading font-bold mb-6">Redefining The Sweet Treat Experience</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 text-lg leading-relaxed">
+                        CandyLoop started with a simple mission: take classic nostalgic treats and elevate them into modern culinary masterpieces. We don't just serve food; we serve an experience.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8 text-lg leading-relaxed">
+                        From spinning massive organic cotton candy clouds to frying decadent, Instagram-worthy loaded funnel cakes, every item is made fresh to order right before your eyes.
+                    </p>
+                    <a href="about.html" class="inline-block bg-brand-dark dark:bg-white text-white dark:text-brand-dark px-8 py-3 rounded-full font-bold hover:bg-brand-pink hover:text-white transition transform hover:-translate-y-1 shadow-xl">Read More About Us</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 3: Upcoming event calendar -->
+    <!-- SECTION 3: Our Offerings (Menu Grid) -->
+    <section class="py-24 bg-brand-cream dark:bg-[#0f172a] text-brand-dark dark:text-white border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-blue font-bold tracking-widest uppercase mb-2">What We Serve</h2>
+                <h3 class="text-4xl font-heading font-bold mb-4">Our Signature Offerings</h3>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Discover the three pillars of the CandyLoop menu, crafted to satisfy every sweet tooth.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                <div class="flex flex-col bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-xl text-center group hover:-translate-y-2 transition duration-300 border border-transparent hover:border-brand-pink">
+                    <div class="w-20 h-20 mx-auto bg-brand-pink/10 rounded-full flex items-center justify-center mb-6 text-brand-pink text-3xl">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold font-heading mb-4">Gourmet Cotton Candy</h4>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow">Massive clouds spun from organic sugar with unique natural flavors and edible glitter.</p>
+                    <a href="menu.html" class="mt-auto text-brand-pink font-bold hover:underline underline-offset-4">View Flavors &rarr;</a>
+                </div>
+                <div class="flex flex-col bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-xl text-center group hover:-translate-y-2 transition duration-300 border border-transparent hover:border-brand-gold">
+                    <div class="w-20 h-20 mx-auto bg-brand-gold/10 rounded-full flex items-center justify-center mb-6 text-brand-gold text-3xl">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold font-heading mb-4">Classic Funnel Cakes</h4>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow">Crispy on the outside, fluffy inside, heavily dusted with powdered sugar.</p>
+                    <a href="menu.html" class="mt-auto text-brand-gold font-bold hover:underline underline-offset-4">View Classics &rarr;</a>
+                </div>
+                <div class="flex flex-col bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-xl text-center group hover:-translate-y-2 transition duration-300 border border-transparent hover:border-brand-blue">
+                    <div class="w-20 h-20 mx-auto bg-brand-blue/10 rounded-full flex items-center justify-center mb-6 text-brand-blue text-3xl">
+                        <i class="fa-solid fa-ice-cream"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold font-heading mb-4">Loaded Funnel Cakes</h4>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 flex-grow">Extravagant dessert experiences topped with fruit, ice cream, and decadent drizzles.</p>
+                    <a href="menu.html" class="mt-auto text-brand-blue font-bold hover:underline underline-offset-4">View Loaded Cakes &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: Catering & Events -->
+    <section class="py-24 bg-white dark:bg-slate-800 text-brand-dark dark:text-white border-t border-gray-100 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row-reverse gap-16 items-center">
+                <div class="lg:w-1/2 relative">
+                    <img src="assets/img/carnival_package.png" alt="Food Truck Catering" class="relative z-10 w-full aspect-[4/3] object-cover rounded-3xl shadow-2xl">
+                </div>
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h2 class="text-brand-gold font-bold tracking-widest uppercase mb-2">Book The Truck</h2>
+                    <h3 class="text-4xl font-heading font-bold mb-6">Unforgettable Event Catering</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 text-lg leading-relaxed">
+                        Bring the CandyLoop experience directly to your guests. From corporate parties and weddings to large-scale festivals, we have packages tailored to fit any event size.
+                    </p>
+                    <ul class="space-y-3 mb-8 text-left max-w-md mx-auto lg:mx-0">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-gold"></i> <span class="text-gray-700 dark:text-gray-300">Custom menus and flavor matching</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-gold"></i> <span class="text-gray-700 dark:text-gray-300">Professional, fast, and friendly service</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-gold"></i> <span class="text-gray-700 dark:text-gray-300">A stunning visual aesthetic for your event</span></li>
+                    </ul>
+                    <a href="catering.html" class="inline-block bg-brand-gold text-white px-8 py-3 rounded-full font-bold hover:bg-yellow-600 transition transform hover:-translate-y-1 shadow-xl">View Catering Packages</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Where to Find Us (Event Calendar) -->
     <section class="pt-24 pb-48 bg-brand-cream dark:bg-[#0f172a] text-brand-dark dark:text-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -246,96 +291,7 @@
         </div>
     </section>
 
-    <!-- SECTION 4: Brand story timeline -->
-    <section class="py-24 bg-white dark:bg-slate-800 text-brand-dark dark:text-white border-y border-gray-100 dark:border-gray-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-heading font-bold mb-4">Our Sweet Journey</h2>
-            </div>
-            
-            <div class="relative max-w-5xl mx-auto px-4">
-                <!-- Vertical Line -->
-                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700 md:-translate-x-1/2"></div>
-                
-                <div class="space-y-16 md:space-y-24">
-                    <!-- Timeline Item 1 -->
-                    <div class="relative flex flex-col md:flex-row items-center">
-                        <!-- Left side (Desktop) -->
-                        <div class="hidden md:flex md:w-1/2 md:pr-16 flex-col items-end text-right">
-                            <h4 class="text-3xl font-heading font-bold text-brand-pink">2022</h4>
-                            <p class="text-gray-500 dark:text-gray-400 font-medium text-lg">The Idea Sparks</p>
-                        </div>
-                        
-                        <!-- Dot -->
-                        <div class="absolute left-0 md:left-1/2 w-5 h-5 bg-brand-pink rounded-full md:-translate-x-1/2 z-10 shadow-[0_0_20px_rgba(255,183,178,0.8)] border-4 border-white dark:border-slate-800"></div>
-                        
-                        <!-- Right side (Desktop) / Main side (Mobile) -->
-                        <div class="md:w-1/2 md:pl-16 pl-10 w-full">
-                            <div class="md:hidden mb-4">
-                                <h4 class="text-2xl font-heading font-bold text-brand-pink">2022</h4>
-                                <p class="text-gray-500 dark:text-gray-400 font-medium">The Idea Sparks</p>
-                            </div>
-                            <div class="bg-white dark:bg-slate-900 border border-gray-100 dark:border-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 group hover:-translate-y-1">
-                                <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">Started as a small pop-up tent experimenting with unconventional cotton candy flavors at local farmers markets.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Timeline Item 2 -->
-                    <div class="relative flex flex-col md:flex-row-reverse items-center">
-                        <!-- Right side (Desktop) -->
-                        <div class="hidden md:flex md:w-1/2 md:pl-16 flex-col items-start text-left">
-                            <h4 class="text-3xl font-heading font-bold text-brand-blue">2024</h4>
-                            <p class="text-gray-500 dark:text-gray-400 font-medium text-lg">The First Truck</p>
-                        </div>
-                        
-                        <!-- Dot -->
-                        <div class="absolute left-0 md:left-1/2 w-5 h-5 bg-brand-blue rounded-full md:-translate-x-1/2 z-10 shadow-[0_0_20px_rgba(79,172,254,0.8)] border-4 border-white dark:border-slate-800"></div>
-                        
-                        <!-- Left side (Desktop) / Main side (Mobile) -->
-                        <div class="md:w-1/2 md:pr-16 pl-10 md:pl-0 w-full">
-                            <div class="md:hidden mb-4">
-                                <h4 class="text-2xl font-heading font-bold text-brand-blue">2024</h4>
-                                <p class="text-gray-500 dark:text-gray-400 font-medium">The First Truck</p>
-                            </div>
-                            <div class="bg-white dark:bg-slate-900 border border-gray-100 dark:border-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 group hover:-translate-y-1 md:text-right">
-                                <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">Purchased our first vintage step-van and customized it with neon lights and a state-of-the-art prep kitchen.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Timeline Item 3 -->
-                    <div class="relative flex flex-col md:flex-row items-center">
-                        <!-- Left side (Desktop) -->
-                        <div class="hidden md:flex md:w-1/2 md:pr-16 flex-col items-end text-right">
-                            <h4 class="text-3xl font-heading font-bold text-brand-gold">2026</h4>
-                            <p class="text-gray-500 dark:text-gray-400 font-medium text-lg">Expansion & Catering</p>
-                        </div>
-                        
-                        <!-- Dot -->
-                        <div class="absolute left-0 md:left-1/2 w-5 h-5 bg-brand-gold rounded-full md:-translate-x-1/2 z-10 shadow-[0_0_20px_rgba(226,169,92,0.8)] border-4 border-white dark:border-slate-800"></div>
-                        
-                        <!-- Right side (Desktop) / Main side (Mobile) -->
-                        <div class="md:w-1/2 md:pl-16 pl-10 w-full">
-                            <div class="md:hidden mb-4">
-                                <h4 class="text-2xl font-heading font-bold text-brand-gold">2026</h4>
-                                <p class="text-gray-500 dark:text-gray-400 font-medium">Expansion & Catering</p>
-                            </div>
-                            <div class="bg-white dark:bg-slate-900 border border-gray-100 dark:border-gray-800 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 group hover:-translate-y-1">
-                                <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">Launched our premium event catering service and expanded our menu to include gourmet loaded funnel cakes.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-20">
-                <a href="about.html" class="inline-block bg-transparent border-2 border-gray-200 dark:border-gray-700 text-brand-dark dark:text-white px-10 py-4 rounded-full font-bold hover:bg-brand-pink hover:border-brand-pink hover:text-white transition-all duration-300">Read Full Story</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 5: Instagram/social gallery -->
+    <!-- SECTION 6: Instagram/social gallery -->
     <section class="py-24 bg-brand-cream dark:bg-[#0f172a] overflow-hidden text-brand-dark dark:text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
             <h2 class="text-3xl md:text-4xl font-heading font-bold mb-2">Follow The Cloud</h2>
@@ -344,25 +300,25 @@
         
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
             <div class="group relative aspect-square overflow-hidden rounded-xl shadow-sm">
-                <img src="https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?q=80&w=400" alt="Insta 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <img src="assets/img/cotton_candy_menu.png" alt="Insta 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                     <i class="fa-brands fa-instagram text-white text-3xl"></i>
                 </div>
             </div>
             <div class="group relative aspect-square overflow-hidden rounded-xl md:mt-8 shadow-sm">
-                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=400" alt="Insta 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <img src="assets/img/strawberry-cake.png" alt="Insta 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                     <i class="fa-brands fa-instagram text-white text-3xl"></i>
                 </div>
             </div>
             <div class="group relative aspect-square overflow-hidden rounded-xl shadow-sm">
-                <img src="https://images.unsplash.com/photo-1514517521153-1be72277b32f?q=80&w=400" alt="Insta 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <img src="assets/img/ultimate_glow_package.png" alt="Insta 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                     <i class="fa-brands fa-instagram text-white text-3xl"></i>
                 </div>
             </div>
             <div class="group relative aspect-square overflow-hidden rounded-xl md:mt-8 shadow-sm">
-                <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=400" alt="Insta 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <img src="assets/img/caramel-cake.png" alt="Insta 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                     <i class="fa-brands fa-instagram text-white text-3xl"></i>
                 </div>
@@ -370,7 +326,7 @@
         </div>
     </section>
 
-    <!-- SECTION 6: Catering booking CTA -->
+    <!-- SECTION 7: Catering booking CTA -->
     <section class="py-24 bg-brand-pink relative overflow-hidden">
         <!-- Abstract shapes -->
         <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
